@@ -1,0 +1,7 @@
+Reference,HTTPMethod,RequestHeaders,EndPoint,QueryParam,RequestPayload
+Login,POST,"{
+  ""Content-Type"": ""application/json""
+}",/auth,,"{
+  ""password"": ""{password}"",
+  ""username"": ""{username}""
+}"

@@ -1,0 +1,4 @@
+P_Key,Business Feature,TestName,Description,TestMethodName,TestDataSource,TC_ID,TC_TYPE,SuiteType,Execute,Invoke,RunOrder,Comment
+Module 1,Registration,,, , , , ,, ,, , 
+1,Login Feature,Login Valid – User details,,loginValid,UserDetails~ValidUser,TC_1,Web,SmokeSuite,Yes,1,1,
+2,Login Feature,Login Invalid – User details,,loginInvalid,UserDetails~InvalidUser,TC_2,Web,SmokeSuite,No,2,2,
