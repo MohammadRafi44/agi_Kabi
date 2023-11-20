@@ -7,6 +7,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoginPageObjects {
+    /**
+     * Page Objects
+     * A map of map is used to store the page objects of the Application
+     * Add objects in the Right section
+     * Add getters to get the Page Objects.
+     * Name the method with the type of the object, following standards
+     */
+
     static Map<String, Map<String, String>> objects = new HashMap<>() {{
         // Button
         put("button-language", new HashMap<>() {{
@@ -65,11 +73,9 @@ public class LoginPageObjects {
     // Link
     // Radio
     // Text
-
     public static By getTextUsername() throws Exception {
         return By.xpath(get("text-username"));
     }
-
 
     public static By getTextPassword() throws Exception {
         return By.xpath(get("text-password"));

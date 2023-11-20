@@ -11,7 +11,10 @@ import java.util.Map;
 public class LoginAPI extends UnirestAPI {
     public static final ReportManager logger = new ReportManager(LoginAPI.class);
 
-    // API functions
+    /**
+     * API function
+     * A API function is the one which performs the API request to the Application
+     */
     public HttpResponse<JsonNode> login(Map<String, String> data) throws Exception {
         Map<String, String> apiData = TestDataManager.getTestDataAsMap("APIDetails", "Login");
         processRequestURL(apiData);
@@ -23,11 +26,25 @@ public class LoginAPI extends UnirestAPI {
         return getResponse(apiData);
     }
 
-    // Wait functions
+    /**
+     * Wait function
+     * A Wait function is the one which waits for certain event on the API response.
+     */
+    public void waitForAccountStatus() throws Exception {
+    }
 
-    // Verify functions
+    /**
+     * Verify function
+     * A Verify function is the one which return a boolean flag as a rust of the verification
+     * Can be used in the Asserts
+     * Can be used for conditional business flow based on data.
+     */
 
-    // Assert functions
+    /**
+     * Assert function
+     * A Assert function is the one which does the Test Validation & Reports the same in Report
+     * Always use addPassLabel
+     */
     public void assertLoginResponse(HttpResponse<JsonNode> response) {
         UnirestAPI.assertResponseCode(response, "200");
         UnirestAPI.assertResponseMessage(response, "");

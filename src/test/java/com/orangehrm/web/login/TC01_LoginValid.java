@@ -12,7 +12,6 @@ public class TC01_LoginValid extends OrangeHRMWebTest {
     public void loginValid(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
-        app.loginPage.changeLanguage(TestConfigManager.getSettingsApplicationLanguage());
         app.loginPage.assertLoginPageDisplayed();
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
