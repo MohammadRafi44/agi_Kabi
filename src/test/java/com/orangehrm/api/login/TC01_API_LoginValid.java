@@ -8,17 +8,25 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.orangehrm.api.base.OrangeHRMAPITest;
 
-public class TC01_LoginValid extends OrangeHRMAPITest {
+public class TC01_API_LoginValid extends OrangeHRMAPITest {
 
     @Test(dataProvider = "testDataProvider")
-    public void loginValid(Map<String, String> data) throws Exception {
+    public void apiLoginValid(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
-        logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
+
+        logger.info("Step 01: Get Login API Details");
+        data.putAll(api.loginApi.getLoginAPIDetails("Login"));
         HttpResponse<JsonNode> response = api.loginApi.login(data);
-        api.loginApi.assertLoginResponse(response);
-        logger.info("Step 02: Validate Response");
+
+        logger.info("Step 02: Validate Complete Response");
+        api.loginApi.assertLoginResponse(data);
+
+        logger.info("Step 03: Validate Specific Response");
         String token = String.valueOf(response.getBody().getObject().getString("token"));
         Assert.assertNotEquals(token, "", "Response body token.");
         logger.pass("Response body token is " + token);
+
+        // Cascade API Possible
+
     }
 }

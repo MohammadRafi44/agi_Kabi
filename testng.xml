@@ -7,7 +7,7 @@
     </listeners>
     <test name="All Web Tests">
         <packages>
-            <package name="com.orangehrm.web.*"/>
+            <package name="com.orangehrm.*"/>
         </packages>
     </test>
 </suite>

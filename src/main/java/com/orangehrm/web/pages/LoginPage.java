@@ -91,10 +91,9 @@ public class LoginPage extends WebBasePage {
     }
 
     public void assertErrorDisplayedInvalidCredentials() throws Exception {
-        Browser.waitForSeconds(5);
         Browser.waitUntilVisibilityOfElement(LoginPageObjects.getButtonLogin(), elementTimeout);
-        Assert.assertTrue(Browser.isElementPresent(LoginPageObjects.getButtonLogin()),
-                "Error message displayed.");
+        logger.addScreenshot("Error Invalid credentials.");
+        Assert.assertTrue(Browser.isElementPresent(LoginPageObjects.getButtonLogin()), "Error message displayed.");
         logger.addPassLabel("Error displayed - Invalid credentials.");
     }
 }

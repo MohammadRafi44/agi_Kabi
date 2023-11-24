@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import java.util.Map;
 
-public class TC02_LoginInvalid extends OrangeHRMWebTest {
+public class TC02_Web_LoginInvalid extends OrangeHRMWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void loginInvalid(Map<String, String> data) throws Exception {
