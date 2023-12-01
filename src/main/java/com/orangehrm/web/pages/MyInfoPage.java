@@ -1,6 +1,5 @@
 package com.orangehrm.web.pages;
 
-import com.orangehrm.web.objects.LoginPageObjects;
 import com.orangehrm.web.objects.MyInfoPageObjects;
 import com.testcrew.base.WebBasePage;
 import com.testcrew.manager.ReportManager;

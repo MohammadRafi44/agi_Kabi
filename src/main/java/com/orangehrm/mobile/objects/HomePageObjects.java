@@ -10,8 +10,8 @@ public class HomePageObjects {
 
     static Map<String, Map<String, String>> objects = new HashMap<>() {{
         // Button
-        put("button-get-started", new HashMap<>() {{
-            put("en", "//*[@class = 'android.widget.TextView' and (@text = 'Get Started!' or . = 'Get Started!')]");
+        put("button-Continue", new HashMap<>() {{
+            put("en", "//android.widget.TextView[@text='CONTINUE']");
             put("ar", "");
         }});
         // Checkbox
@@ -19,14 +19,14 @@ public class HomePageObjects {
         // Element
         // Label
         put("label-Enter-OrangeHRM-URL", new HashMap<>() {{
-            put("en", "//*[@class = 'android.widget.TextView' and (@text = 'Enter OrangeHRM URL' or . = 'Enter OrangeHRM URL')]");
+            put("en", "//android.widget.TextView[@text='Enter OrangeHRM URL']");
             put("ar", "");
         }});
         // Link
         // Radio
         // Text
         put("text-Instance-URL", new HashMap<>() {{
-            put("en", "(//*[@class='android.widget.EditText'])[2]");
+            put("en", "//android.widget.EditText");
             put("ar", "");
         }});
     }};
@@ -36,8 +36,8 @@ public class HomePageObjects {
     }
 
     // Button
-    public static By getButtonGetStarted() throws Exception {
-        return By.xpath(get("button-get-started"));
+    public static By getButtonContinue() throws Exception {
+        return By.xpath(get("button-Continue"));
     }
 
     // Checkbox

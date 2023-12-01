@@ -1,9 +1,9 @@
 package com.orangehrm.web.pages;
 
-import com.orangehrm.web.objects.LoginPageObjects;
 import com.testcrew.base.WebBasePage;
 import com.testcrew.manager.ReportManager;
 import com.testcrew.web.Browser;
+import com.orangehrm.web.objects.LoginPageObjects;
 import org.testng.Assert;
 
 import java.util.Map;
@@ -91,9 +91,9 @@ public class LoginPage extends WebBasePage {
     }
 
     public void assertErrorDisplayedInvalidCredentials() throws Exception {
-        Browser.waitUntilVisibilityOfElement(LoginPageObjects.getButtonLogin(), elementTimeout);
+        Browser.waitUntilVisibilityOfElement(LoginPageObjects.getElementErrorInvalidCredentials(), elementTimeout);
         logger.addScreenshot("Error Invalid credentials.");
-        Assert.assertTrue(Browser.isElementPresent(LoginPageObjects.getButtonLogin()), "Error message displayed.");
+        Assert.assertTrue(Browser.isElementPresent(LoginPageObjects.getElementErrorInvalidCredentials()), "Error message displayed.");
         logger.addPassLabel("Error displayed - Invalid credentials.");
     }
 }
