@@ -28,6 +28,11 @@
             <artifactId>test-crew-core-framework</artifactId>
             <version>${crew-centric-framework}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>3.3.1</version>
+        </dependency>
     </dependencies>
 
     <!-- Build Maven -->

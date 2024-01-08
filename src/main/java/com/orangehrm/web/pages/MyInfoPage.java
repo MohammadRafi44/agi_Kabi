@@ -35,7 +35,7 @@ public class MyInfoPage extends WebBasePage {
 
     public void clickSave() throws Exception {
         logger.info("Click Save");
-        Browser.executeJSScrollDown(500);
+        Browser.executeJSScroll(500);
         Browser.click(MyInfoPageObjects.getButtonSave());
     }
 
