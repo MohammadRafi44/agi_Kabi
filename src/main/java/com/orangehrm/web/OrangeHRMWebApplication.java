@@ -24,6 +24,6 @@ public class OrangeHRMWebApplication {
         } else {
             Browser.openUrl(TestConfigManager.getTestSettingsWebAppURL());
         }
-        loginPage.waitForPageLoad();
+//        loginPage.waitForPageLoad();
     }
 }

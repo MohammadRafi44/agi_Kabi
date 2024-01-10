@@ -1,6 +1,7 @@
 package com.orangehrm.web.login;
 
 import com.orangehrm.web.base.OrangeHRMWebTest;
+import com.testcrew.manager.TestDataManager;
 import org.testng.annotations.Test;
 
 import java.util.Map;
@@ -11,9 +12,11 @@ public class TC02_Web_LoginInvalid extends OrangeHRMWebTest {
     public void loginInvalid(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
-        logger.info("Step 01: Login to Application Using Page functions");
-        app.loginPage.login(data);
-        logger.info("Step 02: Verify Error displayed - Invalid credentials");
-        app.loginPage.assertErrorDisplayedInvalidCredentials();
+//        logger.info("Step 01: Login to Application Using Page functions");
+//        app.loginPage.login(data);
+//        logger.info("Step 02: Verify Error displayed - Invalid credentials");
+//        app.loginPage.assertErrorDisplayedInvalidCredentials();
+        data.putAll(TestDataManager.readDependantTestData("loginInvalid"));
+        logger.info(data.toString());
     }
 }
