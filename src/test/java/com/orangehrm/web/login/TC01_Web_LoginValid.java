@@ -12,11 +12,6 @@ public class TC01_Web_LoginValid extends OrangeHRMWebTest {
     public void loginValid(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
-
-        TestDataManager.addDependantTestData("loginInvalid", "Key1", "Value1");
-        TestDataManager.addDependantTestData("loginInvalid", "Key2", "Value2");
-        TestDataManager.writeDependantTestData("loginInvalid");
-
 //        app.loginPage.assertLoginPageDisplayed();
 //        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
 //        app.loginPage.enterUsername(data.get("Username"));
@@ -25,14 +20,12 @@ public class TC01_Web_LoginValid extends OrangeHRMWebTest {
 //
 //        logger.info("Step 02: Assert Side Menu 'My Info' displayed.");
 //        app.sideMenu.assertMenuExist("My Info");
-//
 //        logger.info("Step 03: Open My Info Page.");
 //        app.sideMenu.openMenuPage("My Info");
 //        app.myInfoPage.waitForPageLoad();
 //
 //        logger.info("Step 04: Assert My Info Page displayed.");
 //        app.myInfoPage.assertMyInfoPageDisplayed();
-//
 //        logger.info("Step 05: Enter/Select the following General Firstname, MiddleName, LastName");
 //        app.myInfoPage.enterFirstName(data.get("FirstName"));
 //        app.myInfoPage.enterMiddleName(data.get("MiddleName"));
@@ -43,5 +36,13 @@ public class TC01_Web_LoginValid extends OrangeHRMWebTest {
 //
 //        logger.info("Step 07: Assert Success Message displayed");
 //        app.myInfoPage.assertSuccessMessageDisplayed();
+
+        TestDataManager.addDependantTestData("test2", "TransactionID", "TransactionID");
+        TestDataManager.addDependantTestData("test2", "Username", "Username");
+        TestDataManager.writeDependantTestData("test2");
+
+        TestDataManager.addDependantGlobalTestData("Global", "GlobalTransactionID", "GlobalTransactionID");
+        TestDataManager.addDependantGlobalTestData("Global", "GlobalUsername", "GlobalUsername");
+        TestDataManager.writeDependantGlobalTestData("Global");
     }
 }
