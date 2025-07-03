@@ -1,13 +1,13 @@
 package com.orangehrm.mobile.base;
 
 import com.orangehrm.mobile.OrangeHRMMobileApplication;
-import com.testcrew.manager.TestConfigManager;
-import com.testcrew.mobile.Mobile;
-import com.testcrew.wrapper.base.TestCrewMobileBaseTest;
+import com.alghurair.manager.TestConfigManager;
+import com.alghurair.mobile.Mobile;
+import com.alghurair.wrapper.base.AlGhurairMobileBaseTest;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeSuite;
 
-public class OrangeHRMMobileTest extends TestCrewMobileBaseTest {
+public class OrangeHRMMobileTest extends AlGhurairMobileBaseTest {
 
     public OrangeHRMMobileApplication app;
 

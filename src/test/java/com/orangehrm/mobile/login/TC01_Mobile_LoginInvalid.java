@@ -1,7 +1,7 @@
 package com.orangehrm.mobile.login;
 
 import com.orangehrm.mobile.base.OrangeHRMMobileTest;
-import com.testcrew.manager.TestConfigManager;
+import com.alghurair.manager.TestConfigManager;
 import org.testng.annotations.Test;
 
 import java.util.Map;

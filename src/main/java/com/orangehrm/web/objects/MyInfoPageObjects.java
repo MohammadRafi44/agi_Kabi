@@ -1,6 +1,6 @@
 package com.orangehrm.web.objects;
 
-import com.testcrew.manager.TestConfigManager;
+import com.alghurair.manager.TestConfigManager;
 import org.openqa.selenium.By;
 
 import java.util.HashMap;

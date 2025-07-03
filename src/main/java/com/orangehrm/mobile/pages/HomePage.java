@@ -1,8 +1,8 @@
 package com.orangehrm.mobile.pages;
 
-import com.testcrew.base.MobileBasePage;
-import com.testcrew.manager.ReportManager;
-import com.testcrew.mobile.Mobile;
+import com.alghurair.base.MobileBasePage;
+import com.alghurair.manager.ReportManager;
+import com.alghurair.mobile.Mobile;
 import com.orangehrm.mobile.objects.HomePageObjects;
 import org.testng.Assert;
 

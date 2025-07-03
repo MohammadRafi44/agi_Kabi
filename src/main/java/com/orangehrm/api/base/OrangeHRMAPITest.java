@@ -1,9 +1,9 @@
 package com.orangehrm.api.base;
 
 import com.orangehrm.api.OrangeHRMAPI;
-import com.testcrew.wrapper.base.TestCrewAPIBaseTest;
+import com.alghurair.wrapper.base.AlGhurairAPIBaseTest;
 
-public class OrangeHRMAPITest extends TestCrewAPIBaseTest {
+public class OrangeHRMAPITest extends AlGhurairAPIBaseTest {
 
     public OrangeHRMAPI api;
 

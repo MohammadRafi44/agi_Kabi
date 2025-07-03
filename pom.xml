@@ -13,7 +13,8 @@
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
 
-        <crew-centric-framework>2024.1.0</crew-centric-framework>
+       <!----> <crew-centric-framework>2025.1.0</crew-centric-framework>
+        <alghurair-centric-framework>2025.1.0</alghurair-centric-framework>
         <maven-jar-plugin>3.2.0</maven-jar-plugin>
         <maven-compiler-plugin>3.11.0</maven-compiler-plugin>
         <maven-surefire-plugin>3.1.2</maven-surefire-plugin>
@@ -24,9 +25,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.testcrew</groupId>
-            <artifactId>test-crew-core-framework</artifactId>
-            <version>${crew-centric-framework}</version>
+            <groupId>com.alghurair</groupId>
+            <artifactId>al-ghurair-core-framework</artifactId>
+            <version>${alghurair-centric-framework}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>

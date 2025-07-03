@@ -1,8 +1,8 @@
 package com.orangehrm.web.pages;
 
-import com.testcrew.base.WebBasePage;
-import com.testcrew.manager.ReportManager;
-import com.testcrew.web.Browser;
+import com.alghurair.base.WebBasePage;
+import com.alghurair.manager.ReportManager;
+import com.alghurair.web.Browser;
 import com.orangehrm.web.objects.LoginPageObjects;
 import org.testng.Assert;
 

@@ -1,8 +1,8 @@
 package com.orangehrm.web;
 
 import com.orangehrm.web.pages.*;
-import com.testcrew.manager.TestConfigManager;
-import com.testcrew.web.Browser;
+import com.alghurair.manager.TestConfigManager;
+import com.alghurair.web.Browser;
 
 import java.util.Map;
 

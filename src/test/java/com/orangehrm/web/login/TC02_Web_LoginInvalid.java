@@ -1,7 +1,7 @@
 package com.orangehrm.web.login;
 
 import com.orangehrm.web.base.OrangeHRMWebTest;
-import com.testcrew.manager.TestDataManager;
+import com.alghurair.manager.TestDataManager;
 import org.testng.annotations.Test;
 
 import java.util.Map;

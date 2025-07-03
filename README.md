@@ -1,4 +1,4 @@
-# Test Automation Suite Powered by TestCrew
+# Test Automation Suite Powered by alghurair
 
 Project description
 
@@ -41,7 +41,7 @@ Project description
   
 ### Installation
 
-- Place test-crew-core-framework m2 package in .m2 folder.
+- Place al-ghurair-core-framework m2 package in .m2 folder.
   ![img.png](readme/img.png)
 
 

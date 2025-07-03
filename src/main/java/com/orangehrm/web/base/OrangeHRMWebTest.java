@@ -1,13 +1,13 @@
 package com.orangehrm.web.base;
 
 import com.orangehrm.web.OrangeHRMWebApplication;
-import com.testcrew.web.Browser;
-import com.testcrew.wrapper.base.TestCrewWebBaseTest;
+import com.alghurair.web.Browser;
+import com.alghurair.wrapper.base.AlGhurairWebBaseTest;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeSuite;
 
-public class OrangeHRMWebTest extends TestCrewWebBaseTest {
+public class OrangeHRMWebTest extends AlGhurairWebBaseTest {
 
     public OrangeHRMWebApplication app;
 
