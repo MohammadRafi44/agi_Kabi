@@ -2,11 +2,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.orangehrm</groupId>
-    <artifactId>orangehrm-test-suite</artifactId>
+    <groupId>com.agi</groupId>
+    <artifactId>agi-test-suite</artifactId>
     <version>1.0.0</version>
-    <name>orangehrm-test-suite</name>
-    <url>https://opensource-demo.orangehrmlive.com/</url>
+    <name>agi-test-suite</name>
+<!--    <url>https://opensource-demo.agilive.com/</url>-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
