@@ -1,78 +1,180 @@
-# Test Automation Suite Powered by alghurair
+# 🧪 Test Automation Suite Powered by Al Ghurair
 
-Project description
+## 📘 Project Description
+A Java-based test automation framework for functional, end-to-end UI, API, and Mobile testing.
 
-## Table of Contents
+---
 
+## 📚 Table of Contents
 - [Project Overview](#project-overview)
 - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Running Tests](#running-tests)
 - [Reporting](#reporting)
+- [📱 Mobile Tests - Configuration Guide](#-mobile-tests---configuration-guide)
 
-## Project Overview
+---
 
-- Java based project for test automation 
-- Addresses functional, end to end - UI, API & Mobile testing. 
-- The framework uses **Selenium** with **TestNG** adheres to **Page object model** design pattern.
-- **Extent reporter**,**PDF reporter**,**CSV reporter** as a reporting tool 
-- Video Recording of UI Test execution is supported.
+## 🔍 Project Overview
+- Java-based project for test automation.
+- Supports functional and end-to-end testing across Web, API, and Mobile layers.
+- Framework uses Selenium with TestNG following the Page Object Model (POM) design.
+- Integrates Extent Reports, PDF Reports, and CSV Reports.
+- Supports UI test execution video recording.
 
-## Getting Started
+---
 
-- To Get Started with the Test Automation Project, Follow the Steps below
+## 🚀 Getting Started
+To get started with this test automation project, follow the steps below.
 
-### Prerequisites
+---
 
-- Below tools are common for Web & Mobile
-    - Java 1.8
-    - Maven (latest version)
-    - Intellj IDE (latest version)
+## 🧱 Prerequisites
 
-- Other tools required for mobile
-    - Android Studio (latest version)
-    - Setup android emulator to execute testcases on emulator
-    - Appium (latest version)
-    - Appium-doctor (to check if the required setup for running android / ios testcase is complete or not)
-    - Nodejs
-  
-### Installation
+### Common Tools for Web & APIs
+- Java JDK 21
+- Maven (latest)
+- IntelliJ IDE (latest)
 
-- Place al-ghurair-core-framework m2 package in .m2 folder.
-  ![img.png](readme/img.png)
+---
 
+## ⚙️ Installation
 
-- Checkout the Client Test automation Project from Version Management System (GitLab / TFS / Github)
+1. Place `al-ghurair-core-framework` `.m2` package into the local `.m2` folder.
 
-  ![img.png](readme/img_1.png)
+2. Checkout Test Automation Project from Version Management System (Azure Repo).
 
+3. Perform Maven Update and ensure no dependency errors exist.
 
-- Do Maven Update & Ensure No Error in Project & all Dependencies associated as shown above.
+---
 
-## Usage
+## 🧩 Chrome Driver
 
-- To Run Test
-    - Set TestConfig.properties the browser version, RunManager fileName & Other Necessary config settings.
-      ![img.png](readme/img_2.png)
-    - Open Run Manager Workbook SuiteDetails Sheet & Mark the Test to be executed as Yes
-      ![img.png](readme/img_3.png)
+📍 **Location:**  
+The ChromeDriver executable is embedded within the framework at:\drivers
 
-## Project Structure
+---
 
-- Project is Well organised following the Page Object Model.
-  - ![img.png](readme/img_4.png)
+## ▶️ Usage
 
-## Running Tests
+1. Configure `TestConfig.properties` with browser type, version, run manager file name, and other necessary settings.
 
-- Execute a suite using IDE:
-    - Open the IDE (eclipse), on root folder you will find a xml named testng.xml.
-    - Right click -> Run as -> TestNG suite: If this option is not available that means you have to install testNG on to
-      your IDE(google for solution).
+2. Update `RunManager` workbook under `SuiteDetails` sheet and mark test cases as **Yes** for execution.
 
-## Reporting
+---
 
-- Once the execution is completed, the reports will be created under reports folder on the project root Open this on any browser to view it.
-  - ![img.png](readme/img_5.png)
+## 🧩 Project Structure
+The framework is structured using the **Page Object Model** (POM) pattern to ensure scalability and maintainability.
+
+---
+
+## 🧪 Running Tests
+
+To execute tests via IntelliJ IDE:
+
+- Locate `testng.xml` at the root of the project.
+- Right-click → Run as → TestNG Suite
+- *(Install TestNG plugin if not visible.)*
+
+---
+
+## 📊 Reporting
+
+- Post execution, reports will be available under the `reports` folder in project root at: \report 
+- Open in any browser to view
+- Reports available in below formats
+  - HTML 
+  - PDF 
+  - CSV 
+- Test Excecution of Video Recordings will be available at: \report\2025-07-17-02-47-48
+   - Here 2025-07-17-02-47-48 is timestamp of the run
+
+---
+
+## 📊 Test Execution Log
+
+🗂️ The detailed execution log is stored at:\report\TestExecution.log
+
+---
+
+## 📱 Mobile Tests - Configuration Guide
+
+### ✅ Prerequisites
+- Windows OS
+- Java JDK 21
+- Node.js (LTS version)
+- Real Android device with USB debugging enabled
+
+### 🔧 Installation Steps
+
+1. **Install Java JDK**  
+   [Download JDK 21](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)  
+   Set environment variables:  
+   ```bash
+   setx JAVA_HOME "C:\Program Files\Java\jdk-21"
+   setx PATH "%JAVA_HOME%\bin;%PATH%"
+   ```
+
+2. **Install Node.js**  
+   [Download Node.js](https://nodejs.org/)  
+   Verify installation:
+   ```bash
+   node -v
+   npm -v
+   ```
+
+3. **Install Appium CLI**  
+   ```bash
+   npm install -g appium
+   appium --version
+   ```
+
+4. **Install Appium Doctor**  
+   ```bash
+   npm install -g appium-doctor
+   appium-doctor
+   ```
+
+5. **Install Android SDK Command Line Tools**  
+   [Download CLI Tools](https://developer.android.com/studio#cmdline-tools)  
+   Extract and set environment variables:
+   ```bash
+   setx ANDROID_HOME "C:\sdk"
+   setx PATH "%PATH%;%ANDROID_HOME%\cmdline-tools\tools\bin"
+   setx PATH "%PATH%;%ANDROID_HOME%\platform-tools"
+   ```
+
+6. **Install Required SDK Components**  
+   ```bash
+   sdkmanager "platform-tools" "platforms;android-30" "build-tools;30.0.3"
+   ```
+
+7. **Start Appium Server**  
+   ```bash
+   appium
+   ```
+
+8. **Connect Real Android Device**  
+   Enable USB debugging. Then verify:
+   ```bash
+   adb devices
+   ```
+
+9. **Update TestConfig for Mobile**  
+   Set the following in `TestConfig.properties`:
+   ```properties
+   settings.mobile.app.package=com.orangehrm.opensource
+   settings.mobile.app.activity=com.orangehrm.opensource.MainActivity
+   ```
+
+---
+
+### 🟢 Final Check
+
+- ✅ Device shows up with `adb devices`
+- ✅ Appium server running on `http://127.0.0.1:4723`
+- ✅ Environment variables for Java, Node.js, and Android SDK set
+- ✅ You're ready to run Appium tests!
