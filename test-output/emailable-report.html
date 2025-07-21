@@ -9,10 +9,24 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Test Suite</th></tr>
-<tr><td><a href="#t0">All Web Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">26,127</td><td></td><td></td></tr>
+<tr><td><a href="#t0">All Web Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">119,685</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">All Web Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.agi.mobile.login.TC01_Mobile_LoginValid</td><td><a href="#m0">mobileLoginValid</a></td><td rowspan="1">1752749277865</td><td rowspan="1">18113</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">All Web Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.agi.mobile.login.TC01_Mobile_LoginValid</td><td><a href="#m0">mobileLoginValid</a></td><td rowspan="1">1753081742400</td><td rowspan="1">101012</td></tr></tbody>
 </table>
-<h2>All Web Tests</h2><h3 id="m0">com.agi.mobile.login.TC01_Mobile_LoginValid#mobileLoginValid</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Username=Admin, Reference=MobileValidUser, Password=admin123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>All Web Tests</h2><h3 id="m0">com.agi.mobile.login.TC01_Mobile_LoginValid#mobileLoginValid</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Username=Admin, Reference=MobileValidUser, Password=admin123}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.TextView[@text=&apos;Enter OrangeHRM URL&apos;] (tried for 100 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.buddysapp.MainActivity, appium:appPackage: com.buddysapp.dev.revamp, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.buddysapp.MainActivity, appPackage: com.buddysapp.dev.revamp, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RFCT20FMQYN, newCommandTimeout: 100000, platformName: ANDROID}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-N981B, appium:deviceName: RFCT20FMQYN, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: RFCT20FMQYN, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:pixelRatio: 2.8125, appium:platformVersion: 13, appium:statBarHeight: 92, appium:takesScreenshot: true, appium:viewportRect: {height: 2308, left: 0, top: 92, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c79ce07a-3579-48cc-bdbe-3e8bcc0b93ab
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.alghurair.mobile.Mobile.waitUntilVisibilityOfElement(Mobile.java:178)
+	at com.agi.mobile.pages.HomePage.waitForPageLoad(HomePage.java:44)
+	at com.agi.mobile.login.TC01_Mobile_LoginValid.mobileLoginValid(TC01_Mobile_LoginValid.java:14)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -13,8 +13,8 @@
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
           <include name="afterSuite"/>
-          <include name="beforeSuiteRewaa"/>
           <include name="beforeSuite"/>
+          <include name="beforeSuiteRewaa"/>
         </methods>
       </class> <!-- com.agi.mobile.login.TC01_Mobile_LoginValid -->
     </classes>

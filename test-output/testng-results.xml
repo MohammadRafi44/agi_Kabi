@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-17T14:47:50 GST" name="Test Suite" finished-at="2025-07-17T14:48:16 GST" duration-ms="26127">
+  <suite started-at="2025-07-21T11:08:44 GST" name="Test Suite" finished-at="2025-07-21T11:10:43 GST" duration-ms="119685">
     <groups>
     </groups>
-    <test started-at="2025-07-17T14:47:50 GST" name="All Web Tests" finished-at="2025-07-17T14:48:16 GST" duration-ms="26127">
+    <test started-at="2025-07-21T11:08:44 GST" name="All Web Tests" finished-at="2025-07-21T11:10:43 GST" duration-ms="119685">
       <class name="com.agi.api.login.TC01_API_LoginValid">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@2e93108a]" started-at="2025-07-17T14:47:50 GST" name="beforeSuite" finished-at="2025-07-17T14:47:50 GST" duration-ms="42" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@38cb1606]" started-at="2025-07-21T11:08:44 GST" name="beforeSuite" finished-at="2025-07-21T11:08:44 GST" duration-ms="35" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@2e93108a]" started-at="2025-07-17T14:48:16 GST" name="afterSuite" finished-at="2025-07-17T14:48:16 GST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@38cb1606]" started-at="2025-07-21T11:10:44 GST" name="afterSuite" finished-at="2025-07-21T11:10:44 GST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.agi.api.login.TC01_API_LoginValid -->
       <class name="com.agi.mobile.login.TC01_Mobile_LoginValid">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.login.TC01_Mobile_LoginValid@11f3400c]" started-at="2025-07-17T14:47:50 GST" name="beforeMethod" finished-at="2025-07-17T14:47:57 GST" duration-ms="7351" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.login.TC01_Mobile_LoginValid@661db63e]" started-at="2025-07-21T11:08:44 GST" name="beforeMethod" finished-at="2025-07-21T11:09:02 GST" duration-ms="18050" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=TC01_Mobile_LoginValid.mobileLoginValid(java.util.Map)[pri:5, instance:com.agi.mobile.login.TC01_Mobile_LoginValid@11f3400c] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=TC01_Mobile_LoginValid.mobileLoginValid(java.util.Map)[pri:5, instance:com.agi.mobile.login.TC01_Mobile_LoginValid@661db63e] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@49c4118b]]>
+                <![CDATA[org.testng.TestRunner@4769537a]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[Ljava.lang.Object;@7ef7f414]]>
+                <![CDATA[[Ljava.lang.Object;@4504a4ed]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="mobileLoginValid(java.util.Map)[pri:5, instance:com.agi.mobile.login.TC01_Mobile_LoginValid@11f3400c]" started-at="2025-07-17T14:47:57 GST" name="mobileLoginValid" data-provider="testDataProvider" finished-at="2025-07-17T14:48:15 GST" duration-ms="18113" status="PASS">
+        <test-method signature="mobileLoginValid(java.util.Map)[pri:5, instance:com.agi.mobile.login.TC01_Mobile_LoginValid@661db63e]" started-at="2025-07-21T11:09:02 GST" name="mobileLoginValid" data-provider="testDataProvider" finished-at="2025-07-21T11:10:43 GST" duration-ms="101012" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -46,38 +46,75 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.TextView[@text='Enter OrangeHRM URL'] (tried for 100 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.buddysapp.MainActivity, appium:appPackage: com.buddysapp.dev.revamp, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.buddysapp.MainActivity, appPackage: com.buddysapp.dev.revamp, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RFCT20FMQYN, newCommandTimeout: 100000, platformName: ANDROID}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-N981B, appium:deviceName: RFCT20FMQYN, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: RFCT20FMQYN, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:pixelRatio: 2.8125, appium:platformVersion: 13, appium:statBarHeight: 92, appium:takesScreenshot: true, appium:viewportRect: {height: 2308, left: 0, top: 92, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c79ce07a-3579-48cc-bdbe-3e8bcc0b93ab]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.TextView[@text='Enter OrangeHRM URL'] (tried for 100 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.buddysapp.MainActivity, appium:appPackage: com.buddysapp.dev.revamp, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.buddysapp.MainActivity, appPackage: com.buddysapp.dev.revamp, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RFCT20FMQYN, newCommandTimeout: 100000, platformName: ANDROID}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-N981B, appium:deviceName: RFCT20FMQYN, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: RFCT20FMQYN, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:pixelRatio: 2.8125, appium:platformVersion: 13, appium:statBarHeight: 92, appium:takesScreenshot: true, appium:viewportRect: {height: 2308, left: 0, top: 92, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c79ce07a-3579-48cc-bdbe-3e8bcc0b93ab
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.alghurair.mobile.Mobile.waitUntilVisibilityOfElement(Mobile.java:178)
+at com.agi.mobile.pages.HomePage.waitForPageLoad(HomePage.java:44)
+at com.agi.mobile.login.TC01_Mobile_LoginValid.mobileLoginValid(TC01_Mobile_LoginValid.java:14)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mobileLoginValid -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.login.TC01_Mobile_LoginValid@11f3400c]" started-at="2025-07-17T14:48:15 GST" name="afterMethod" finished-at="2025-07-17T14:48:16 GST" duration-ms="534" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.login.TC01_Mobile_LoginValid@661db63e]" started-at="2025-07-21T11:10:43 GST" name="afterMethod" finished-at="2025-07-21T11:10:43 GST" duration-ms="516" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- com.agi.mobile.login.TC01_Mobile_LoginValid -->
       <class name="com.agi.web.login.TC01_Web_LoginValid">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@173a5fad]" started-at="2025-07-17T14:47:50 GST" name="beforeSuite" finished-at="2025-07-17T14:47:50 GST" duration-ms="54" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@c0013b8]" started-at="2025-07-21T11:08:44 GST" name="beforeSuite" finished-at="2025-07-21T11:08:44 GST" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@173a5fad]" started-at="2025-07-17T14:47:50 GST" name="beforeSuiteRewaa" finished-at="2025-07-17T14:47:50 GST" depends-on-methods="com.alghurair.base.WebBaseTest.beforeSuite" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@c0013b8]" started-at="2025-07-21T11:08:44 GST" name="beforeSuiteRewaa" finished-at="2025-07-21T11:08:44 GST" depends-on-methods="com.alghurair.base.WebBaseTest.beforeSuite" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuiteRewaa -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@173a5fad]" started-at="2025-07-17T14:48:16 GST" name="afterSuite" finished-at="2025-07-17T14:48:16 GST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@c0013b8]" started-at="2025-07-21T11:10:44 GST" name="afterSuite" finished-at="2025-07-21T11:10:44 GST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.agi.web.login.TC01_Web_LoginValid -->
       <class name="com.agi.mobile.login.TC01_Mobile_LoginInvalid">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.mobile.login.TC01_Mobile_LoginInvalid@7b8b07ae]" started-at="2025-07-17T14:47:50 GST" name="beforeSuite" finished-at="2025-07-17T14:47:50 GST" duration-ms="238" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.mobile.login.TC01_Mobile_LoginInvalid@30c8c6ab]" started-at="2025-07-21T11:08:43 GST" name="beforeSuite" finished-at="2025-07-21T11:08:44 GST" duration-ms="231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.mobile.login.TC01_Mobile_LoginInvalid@7b8b07ae]" started-at="2025-07-17T14:47:50 GST" name="beforeSuiteRewaa" finished-at="2025-07-17T14:47:50 GST" depends-on-methods="com.alghurair.base.MobileBaseTest.beforeSuite" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.mobile.login.TC01_Mobile_LoginInvalid@30c8c6ab]" started-at="2025-07-21T11:08:44 GST" name="beforeSuiteRewaa" finished-at="2025-07-21T11:08:44 GST" depends-on-methods="com.alghurair.base.MobileBaseTest.beforeSuite" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuiteRewaa -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.mobile.login.TC01_Mobile_LoginInvalid@7b8b07ae]" started-at="2025-07-17T14:48:16 GST" name="afterSuite" finished-at="2025-07-17T14:48:16 GST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.mobile.login.TC01_Mobile_LoginInvalid@30c8c6ab]" started-at="2025-07-21T11:10:44 GST" name="afterSuite" finished-at="2025-07-21T11:10:44 GST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

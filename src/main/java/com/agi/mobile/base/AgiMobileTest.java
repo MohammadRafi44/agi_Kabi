@@ -28,6 +28,10 @@ public class AgiMobileTest extends AlGhurairMobileBaseTest {
 
         desiredCapabilities.setCapability("deviceName", TestConfigManager.getTestSettingsMobileDeviceName());
         desiredCapabilities.setCapability("platformName", TestConfigManager.getTestSettingsMobilePlatform());
+
+        //In Appium v2, you must explicitly specify the automationName capability. It's not optional anymore.
+        desiredCapabilities.setCapability("automationName", "UiAutomator2");
+
         desiredCapabilities.setCapability("autoGrantPermissions", "true");
         desiredCapabilities.setCapability("appPackage", TestConfigManager.getTestSettingsMobileAppPackage());
         desiredCapabilities.setCapability("appActivity", TestConfigManager.getTestSettingsMobileAppActivity());
