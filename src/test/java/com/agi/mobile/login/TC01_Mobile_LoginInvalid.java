@@ -11,6 +11,7 @@ public class TC01_Mobile_LoginInvalid extends AgiMobileTest {
     @Test(dataProvider = "testDataProvider")
     public void mobileLoginInvalid(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
+//        hi
 //        app.homePage.waitForPageLoad();
 //
 //        logger.info("Step 01: Assert Home page displayed");
