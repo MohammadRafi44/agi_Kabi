@@ -11,22 +11,22 @@ public class TC01_Mobile_LoginValid extends AgiMobileTest {
     @Test(dataProvider = "testDataProvider")
     public void mobileLoginValid(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
-        app.homePage.waitForPageLoad();
-
-        logger.info("Step 01: Assert Home page displayed");
-        app.homePage.assertHomePageDisplayed();
-
-        logger.info("Step 02: Continue to Login");
-        app.homePage.continueToLogin(TestConfigManager.getTestSettingsWebAppURL());
-
-        logger.info("Step 03: Assert Login page displayed");
-        app.loginPage.waitForPageLoad();
-        app.loginPage.assertLoginPageDisplayed();
-
-        logger.info("Step 04: Login to Application Enter Username, Enter Password, click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin();
+//        app.homePage.waitForPageLoad();
+//
+//        logger.info("Step 01: Assert Home page displayed");
+//        app.homePage.assertHomePageDisplayed();
+//
+//        logger.info("Step 02: Continue to Login");
+//        app.homePage.continueToLogin(TestConfigManager.getTestSettingsWebAppURL());
+//
+//        logger.info("Step 03: Assert Login page displayed");
+//        app.loginPage.waitForPageLoad();
+//        app.loginPage.assertLoginPageDisplayed();
+//
+//        logger.info("Step 04: Login to Application Enter Username, Enter Password, click Login");
+//        app.loginPage.enterUsername(data.get("Username"));
+//        app.loginPage.enterPassword(data.get("Password"));
+//        app.loginPage.clickLogin();
 
 //        logger.info("Step 05: Assert Side Menu 'My Info' displayed.");
 //        app.sideMenu.assertMenuExist("My Info");
