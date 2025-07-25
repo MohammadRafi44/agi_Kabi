@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HomePageObjects {
+public class MenuObjects {
 
     static Map<String, Map<String, String>> objects = new HashMap<>() {{
         // Button
@@ -18,10 +18,9 @@ public class HomePageObjects {
             put("en", "//android.widget.TextView[@text=\"\uDB80\uDF5C\"]");
             put("ar", "//android.widget.TextView[@text=\"\uDB80\uDF5C\"]");
         }});
-
-        put("button-Logout", new HashMap<>() {{
-            put("en", "//android.widget.TextView[@text=\"Log Out\"]");
-            put("ar", "//android.widget.TextView[@text=\"Log Out\"]");
+        put("link-MyProfile", new HashMap<>() {{
+            put("en", "//android.widget.TextView[@text=\"My Profile\"]");
+            put("ar", "//android.widget.TextView[@text=\"My Profile\"]");
         }});
 
 
@@ -51,9 +50,7 @@ public class HomePageObjects {
     public static By getButtonContinue() throws Exception {
         return By.xpath(get("button-Continue"));
     }
-    public static By getButtonMenu() throws Exception {
-        return By.xpath(get("button-Menu"));
-    }
+
 
 
     // Checkbox
@@ -70,5 +67,7 @@ public class HomePageObjects {
     public static By getTextInstanceURL() throws Exception {
         return By.xpath(get("text-Instance-URL"));
     }
-
+    public static By getLinkMyProfile() throws Exception {
+        return By.xpath(get("link-MyProfile"));
+    }
 }

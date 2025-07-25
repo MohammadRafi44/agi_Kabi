@@ -36,6 +36,19 @@ public class AgiMobileTest extends AlGhurairMobileBaseTest {
         desiredCapabilities.setCapability("appPackage", TestConfigManager.getTestSettingsMobileAppPackage());
         desiredCapabilities.setCapability("appActivity", TestConfigManager.getTestSettingsMobileAppActivity());
         desiredCapabilities.setCapability("newCommandTimeout", 100000);
+//        desiredCapabilities.setCapability("noReset", "true");
+        desiredCapabilities.setCapability("fullReset", "false");
+        desiredCapabilities.setCapability("autoAcceptAlerts", "true");
+        desiredCapabilities.setCapability("autoDismissAlerts", "true");
+        desiredCapabilities.setCapability("autoGrantPermissions", "true");
+        desiredCapabilities.setCapability("unicodeKeyboard", "true");
+        desiredCapabilities.setCapability("resetKeyboard", "true");
+
+//        desiredCapabilities.setCapability("autoWebview", "true");
+//        desiredCapabilities.setCapability("autoWebviewTimeout", "20000");
+//        desiredCapabilities.setCapability("chromedriverExecutableDir", "/usr/local/bin/chromedriver");
+//        desiredCapabilities.setCapability("chromedriverChromeMappingFile", "/usr/local/bin/chromedriver-chromium-version-mapping.json");
+
 
 //            if (data.get("AutomationName").equalsIgnoreCase("uiautomator2")) {
 //                desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, ANDROID_UIAUTOMATOR2);

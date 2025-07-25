@@ -1,15 +1,17 @@
 package com.agi.mobile.pages;
 
+import com.agi.mobile.objects.HomePageObjects;
+import com.agi.mobile.objects.MenuObjects;
 import com.alghurair.base.MobileBasePage;
 import com.alghurair.manager.ReportManager;
 import com.alghurair.mobile.Mobile;
-import com.agi.mobile.objects.HomePageObjects;
+import com.alghurair.utility.TCRobot;
 import org.testng.Assert;
 
-import java.util.Map;
+import java.awt.event.KeyEvent;
 
-public class HomePage extends MobileBasePage {
-    public static final ReportManager logger = new ReportManager(HomePage.class);
+public class MenuOptions extends MobileBasePage {
+    public static final ReportManager logger = new ReportManager(MenuOptions.class);
 
     /**
      * Page action
@@ -27,12 +29,27 @@ public class HomePage extends MobileBasePage {
     }
     public void clickMenu() throws Exception {
         logger.info("Click Menu");
-        Mobile.waitUntilVisibilityOfElement(HomePageObjects.getButtonMenu(),elementTimeout);
         Mobile.click(HomePageObjects.getButtonMenu());
+    }
+    public void clickMyProfile() throws Exception {
+        logger.info("Click MyProfile");
+        Mobile.waitUntilElementToBeClickable(MenuObjects.getLinkMyProfile(), elementTimeout);
+        Mobile.click(MenuObjects.getLinkMyProfile());
         Mobile.waitForSeconds(1);
         Thread.sleep(1000);
-        logger.addScreenshot("After clicking on Menu");
+        logger.addScreenshot("After clicking on My Profile");
+        Mobile.scrollToBottom();
+
+
+
+//        TCRobot robot = new TCRobot();
+//        robot.keyPress(KeyEvent.VK_END);
+
+        Mobile.waitForSeconds(1);
+        Thread.sleep(1000);
     }
+
+
 
     /**
      * Page function

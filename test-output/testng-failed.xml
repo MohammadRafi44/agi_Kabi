@@ -9,7 +9,8 @@
     <classes>
       <class name="com.agi.mobile.login.TC01_Mobile_LoginValid">
         <methods>
-          <include name="mobileLoginValid" invocation-numbers="0"/>
+          <include name="loginValidDriverID" invocation-numbers="0"/>
+          <include name="loginInvalidDriverID" invocation-numbers="0"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
           <include name="afterSuite"/>

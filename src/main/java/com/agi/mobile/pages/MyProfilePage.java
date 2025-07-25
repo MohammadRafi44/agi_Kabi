@@ -1,15 +1,17 @@
 package com.agi.mobile.pages;
 
+import com.agi.mobile.objects.HomePageObjects;
+import com.agi.mobile.objects.LoginPageObjects;
+import com.agi.mobile.objects.MyProfilePageObjects;
 import com.alghurair.base.MobileBasePage;
 import com.alghurair.manager.ReportManager;
 import com.alghurair.mobile.Mobile;
-import com.agi.mobile.objects.HomePageObjects;
+import lombok.extern.slf4j.Slf4j;
 import org.testng.Assert;
 
-import java.util.Map;
-
-public class HomePage extends MobileBasePage {
-    public static final ReportManager logger = new ReportManager(HomePage.class);
+@Slf4j
+public class MyProfilePage extends MobileBasePage {
+    public static final ReportManager logger = new ReportManager(MyProfilePage.class);
 
     /**
      * Page action
@@ -21,17 +23,20 @@ public class HomePage extends MobileBasePage {
         logger.addScreenshot("After Instance URL");
     }
 
-    public void clickContinue() throws Exception {
-        logger.info("Click Continue");
-        Mobile.click(HomePageObjects.getButtonContinue());
-    }
-    public void clickMenu() throws Exception {
+
+    public void clickLogout() throws Exception {
         logger.info("Click Menu");
-        Mobile.waitUntilVisibilityOfElement(HomePageObjects.getButtonMenu(),elementTimeout);
-        Mobile.click(HomePageObjects.getButtonMenu());
-        Mobile.waitForSeconds(1);
-        Thread.sleep(1000);
-        logger.addScreenshot("After clicking on Menu");
+        Mobile.click(MyProfilePageObjects.getButtonLogout());
+        clickYes();
+        logger.addScreenshot("After clicking on Logout");
+    }
+
+    public void clickYes() throws Exception {
+        logger.info("Click Yes");
+        Mobile.waitUntilElementToBeClickable(MyProfilePageObjects.getButtonYes(), elementTimeout);
+        Mobile.click(MyProfilePageObjects.getButtonYes());
+        Mobile.waitUntilVisibilityOfElement(LoginPageObjects.getBtnUAT(),elementTimeout);
+        logger.addScreenshot("After clicking on Yes");
     }
 
     /**
@@ -40,8 +45,8 @@ public class HomePage extends MobileBasePage {
      */
     public void continueToLogin(String url) throws Exception {
         logger.info("Continue to Login");
-        enterInstanceURL(url);
-        clickContinue();
+//        enterInstanceURL(url);
+//        clickContinue();
     }
 
     /**
