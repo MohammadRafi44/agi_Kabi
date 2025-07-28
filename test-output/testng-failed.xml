@@ -7,9 +7,8 @@
   </listeners>
   <test thread-count="1" parallel="methods" name="All Web Tests(failed)">
     <classes>
-      <class name="com.agi.mobile.login.TC01_Mobile_LoginValid">
+      <class name="com.agi.mobile.suites.TC01_Mobile_LoginValid">
         <methods>
-          <include name="loginValidDriverID" invocation-numbers="0"/>
           <include name="loginInvalidDriverID" invocation-numbers="0"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
@@ -17,7 +16,7 @@
           <include name="beforeSuite"/>
           <include name="beforeSuiteRewaa"/>
         </methods>
-      </class> <!-- com.agi.mobile.login.TC01_Mobile_LoginValid -->
+      </class> <!-- com.agi.mobile.suites.TC01_Mobile_LoginValid -->
     </classes>
   </test> <!-- All Web Tests(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->

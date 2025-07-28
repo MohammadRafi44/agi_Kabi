@@ -36,13 +36,13 @@ public class AgiMobileTest extends AlGhurairMobileBaseTest {
         desiredCapabilities.setCapability("appPackage", TestConfigManager.getTestSettingsMobileAppPackage());
         desiredCapabilities.setCapability("appActivity", TestConfigManager.getTestSettingsMobileAppActivity());
         desiredCapabilities.setCapability("newCommandTimeout", 100000);
-//        desiredCapabilities.setCapability("noReset", "true");
+        desiredCapabilities.setCapability("noReset", "true");
         desiredCapabilities.setCapability("fullReset", "false");
         desiredCapabilities.setCapability("autoAcceptAlerts", "true");
         desiredCapabilities.setCapability("autoDismissAlerts", "true");
         desiredCapabilities.setCapability("autoGrantPermissions", "true");
         desiredCapabilities.setCapability("unicodeKeyboard", "true");
-        desiredCapabilities.setCapability("resetKeyboard", "true");
+//        desiredCapabilities.setCapability("resetKeyboard", "true");
 
 //        desiredCapabilities.setCapability("autoWebview", "true");
 //        desiredCapabilities.setCapability("autoWebviewTimeout", "20000");

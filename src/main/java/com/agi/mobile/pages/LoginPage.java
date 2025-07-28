@@ -38,7 +38,6 @@ public class LoginPage extends MobileBasePage {
         Mobile.click(LoginPageObjects.getLabelHelloThere());
     }
     public void clickGenerateOtp() throws Exception {
-        Mobile.waitForSeconds(2);
         logger.info("Click Generate OTP ");
         Mobile.waitUntilVisibilityOfElement(LoginPageObjects.getButtonGenerateOtp(), elementTimeout);
         Mobile.click(LoginPageObjects.getButtonGenerateOtp());
@@ -56,24 +55,26 @@ public class LoginPage extends MobileBasePage {
 
     public void clickLogin() throws Exception {
         logger.info("Click Login");
+        Mobile.waitUntilElementToBeClickable(LoginPageObjects.getButtonLogin(),elementTimeout);
         Mobile.click(LoginPageObjects.getButtonLogin());
-        Mobile.waitUntilVisibilityOfElement(HomePageObjects.getButtonMenu(),elementTimeout);
-        logger.addScreenshot("After Login");
-//        Mobile.waitForSeconds(10);
-        assertWelcomeTextDisplayed();
+//        clickContinue();
+//        assertWelcomeTextDisplayed();
     }
+
     public void clickUAT() throws Exception {
-        logger.info("Click UAT");
+        logger.info("Click UAT Button");
+        Mobile.waitUntilElementToBeClickable(LoginPageObjects.getBtnUAT(),elementTimeout);
         Mobile.click(LoginPageObjects.getBtnUAT());
         logger.addScreenshot("Clicked on UAT");
     }
-
     public void clickContinue() throws Exception {
         logger.info("Click Continue");
+        Mobile.waitUntilElementToBeClickable(LoginPageObjects.getButtonContinue(),elementTimeout);
         Mobile.click(LoginPageObjects.getButtonContinue());
         logger.addScreenshot("After clicking on Continue button");
-
     }
+
+
 
 
 
@@ -81,45 +82,53 @@ public class LoginPage extends MobileBasePage {
      * Page function
      * A Page function is the group of action.
      */
-    public void login(Map<String, String> data) throws Exception {
-        logger.info("Login to application.");
-        enterUsername(data.get("Username"));
-        enterPassword(data.get("Password"));
+//    public void login(Map<String, String> data) throws Exception {
+//        logger.info("Login to application.");
+//        enterUsername(data.get("Username"));
+//        enterPassword(data.get("Password"));
+//        clickLogin();
+//    }
+    public void selectEnvironment() throws Exception {
+        logger.info("Select Application Environment...");
+        clickUAT();
+        logger.addScreenshot("After Login");
+    }
+    public void login() throws Exception {
+        logger.info("Login to application...");
         clickLogin();
+        Mobile.waitUntilVisibilityOfElement(HomePageObjects.getButtonMenu(),elementTimeout);
+        logger.addScreenshot("After Login");
+    }
+    public void validateInvalidOtpLogin() throws Exception {
+        clickLogin();
+        logger.info("Verifying the Invalid OTP message");
+        Mobile.waitUntilVisibilityOfElement(LoginPageObjects.getTextInvalidOtpErrorMessage(),elementTimeout);
+        assertInvalidOtpErrorMessageDisplayed();
+        logger.addScreenshot("Invalid OTP Message is ...");
+    }
+    public void validateInvalidDriverLogin() throws Exception {
+        clickGenerateOtp();
+        logger.info("Verifying the Invalid Driver Login message");
+        Mobile.waitUntilVisibilityOfElement(LoginPageObjects.getTextInvalidDriverErrorMessage(),elementTimeout);
+        assertInvalidDriverErrorMessageDisplayed();
+        logger.addScreenshot("Invalid Driver Login Message is ...");
     }
     public void enterOtp(String otp) throws Exception {
-        TCRobot tc= new TCRobot();
+
+        Mobile.waitUntilVisibilityOfElement(LoginPageObjects.getOtpDigit(1), elementTimeout);
         if (otp.length() != 6) {
             throw new IllegalArgumentException("OTP must be exactly 6 digits");
         }
 
         for (int i = 0; i < otp.length(); i++) {
             String digit = String.valueOf(otp.charAt(i));
-
-//            // Tap at a safe location before interacting with each OTP field
-//            TouchAction<?> action = new TouchAction<>((PerformsTouchActions) Mobile.driver);
-//            action.tap(PointOption.point(920, 1100)).perform();
-
-            // Scroll and interact with the OTP field
             By locator = LoginPageObjects.getOtpDigit(i);
-
-
             Mobile.click(locator);
             Mobile.getWebElement(locator).sendKeys(digit);
-//            tc.keyPress(KeyEvent.VK_ESCAPE);
         }
-
         logger.info("Entered OTP: " + otp);
         logger.addScreenshot("After entering OTP");
-//        Mobile.click(LoginPageObjects.getLabelHelloThere());
-//        Thread.sleep(1000);
-//        Mobile.click(LoginPageObjects.getButtonGenerateOtp());
-
-
     }
-
-
-
 
     /**
      * Wait function
@@ -157,17 +166,15 @@ public class LoginPage extends MobileBasePage {
         logger.addPassLabel("Login Page displayed.");
     }
 
-    public void assertUATButtonDisplayed() throws Exception {
-        Mobile.waitUntilVisibilityOfElement(LoginPageObjects.getBtnUAT(), elementTimeout);
-        Assert.assertTrue(Mobile.isElementDisplayed(LoginPageObjects.getBtnUAT()), "UAT button not present.");
-        logger.addPassLabel("UAT button is displayed.");
-    }
+
+
     public void assertErrorDisplayedInvalidCredentials() throws Exception {
         Mobile.waitUntilVisibilityOfElement(LoginPageObjects.getLabelErrorInvalidCredentials(), elementTimeout);
         logger.addScreenshot("Error Invalid credentials.");
         Assert.assertTrue(Mobile.isElementPresent(LoginPageObjects.getLabelErrorInvalidCredentials()), "Error message displayed.");
         logger.addPassLabel("Error displayed - Invalid credentials.");
     }
+
     public void assertWelcomeTextDisplayed() throws Exception {
         By welcomeTextLocator = LoginPageObjects.getTextWelcome();
 
@@ -208,6 +215,50 @@ public class LoginPage extends MobileBasePage {
         } catch (Exception e) {
             logger.fail("❌ Exception occurred while verifying Home Page element: " + e.getMessage());
             logger.addScreenshot("❌ Exception during Home Page validation");
+            throw e;
+        }
+    }
+
+    public void assertInvalidOtpErrorMessageDisplayed() throws Exception {
+        By otpErrorLocator = LoginPageObjects.getTextInvalidOtpErrorMessage();
+
+        try {
+            Mobile.waitUntilVisibilityOfElement(otpErrorLocator, elementTimeout);
+
+            if (Mobile.isElementPresent(otpErrorLocator)) {
+                logger.addScreenshot("✅ Invalid OTP error message is visible.");
+                logger.addPassLabel("✅ OTP error message displayed as expected.");
+            } else {
+                logger.addScreenshot("❌ OTP error message not visible.");
+                logger.fail("❌ Expected OTP error message not found on the screen.");
+                throw new AssertionError("Expected OTP error message not found on the screen.");
+            }
+
+        } catch (Exception e) {
+            logger.fail("❌ Exception occurred while verifying OTP error message: " + e.getMessage());
+            logger.addScreenshot("❌ Exception during OTP error message validation");
+            throw e;
+        }
+    }
+
+    public void assertInvalidDriverErrorMessageDisplayed() throws Exception {
+        By invalidDriverErrorLocator = LoginPageObjects.getTextInvalidDriverErrorMessage();
+
+        try {
+            Mobile.waitUntilVisibilityOfElement(invalidDriverErrorLocator, elementTimeout);
+
+            if (Mobile.isElementPresent(invalidDriverErrorLocator)) {
+                logger.addScreenshot("✅ Invalid driver error message is visible.");
+                logger.addPassLabel("✅ 'User does not exist' error message displayed.");
+            } else {
+                logger.addScreenshot("❌ Invalid driver error message not visible.");
+                logger.fail("❌ Expected 'User does not exist' error message not found on the screen.");
+                throw new AssertionError("Expected 'User does not exist' error message not found on the screen.");
+            }
+
+        } catch (Exception e) {
+            logger.fail("❌ Exception occurred while verifying invalid driver error message: " + e.getMessage());
+            logger.addScreenshot("❌ Exception during invalid driver error message validation");
             throw e;
         }
     }

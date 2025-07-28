@@ -95,6 +95,15 @@ public class LoginPageObjects {
             put("en", "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView");
             put("ar", "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView");
         }});
+        put("text-InvalidOtpErrorMessage", new HashMap<>() {{
+            put("en", "//android.widget.TextView[@text=\"OTP entered is either expired or incorrect. Please navigate to Login Page & Generate OTP again\"]");
+            put("ar", "//android.widget.TextView[@text=\"OTP entered is either expired or incorrect. Please navigate to Login Page & Generate OTP again\"]");
+        }});
+        put("text-InvalidDriverErrorMessage", new HashMap<>() {{
+            put("en", "//android.widget.TextView[@text=\"User does not exist\"]");
+            put("ar", "//android.widget.TextView[@text=\"User does not exist\"]");
+        }});
+
 
 
 
@@ -155,4 +164,12 @@ public class LoginPageObjects {
     public static By getTextHomePage() throws Exception {
         return By.xpath(get("text-HomePage"));
     }
+    public static By getTextInvalidOtpErrorMessage() throws Exception {
+        return By.xpath(get("text-InvalidOtpErrorMessage"));
+    }
+    public static By getTextInvalidDriverErrorMessage() throws Exception {
+        return By.xpath(get("text-InvalidDriverErrorMessage"));
+    }
+
+
 }

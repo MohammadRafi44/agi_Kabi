@@ -1,4 +1,4 @@
-package com.agi.mobile.login;
+package com.agi.mobile.suites;
 
 import com.agi.mobile.base.AgiMobileTest;
 import com.alghurair.manager.TestConfigManager;
@@ -9,7 +9,7 @@ import java.util.Map;
 public class TC01_Mobile_LoginInvalid extends AgiMobileTest {
 
     @Test(dataProvider = "testDataProvider")
-    public void mobileLoginInvalid(Map<String, String> data) throws Exception {
+    public void mobileLoginInvalidX(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
 
         app.homePage.waitForPageLoad();
@@ -23,7 +23,7 @@ public class TC01_Mobile_LoginInvalid extends AgiMobileTest {
 
         logger.info("Step 03: Login to Application Using Page functions");
         app.loginPage.waitForPageLoad();
-        app.loginPage.login(data);
+        app.loginPage.login();
 
         logger.info("Step 04: Verify Error displayed - Invalid credentials");
         app.loginPage.assertErrorDisplayedInvalidCredentials();

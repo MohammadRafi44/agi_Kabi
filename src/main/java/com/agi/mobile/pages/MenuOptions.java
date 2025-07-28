@@ -35,18 +35,8 @@ public class MenuOptions extends MobileBasePage {
         logger.info("Click MyProfile");
         Mobile.waitUntilElementToBeClickable(MenuObjects.getLinkMyProfile(), elementTimeout);
         Mobile.click(MenuObjects.getLinkMyProfile());
-        Mobile.waitForSeconds(1);
-        Thread.sleep(1000);
         logger.addScreenshot("After clicking on My Profile");
         Mobile.scrollToBottom();
-
-
-
-//        TCRobot robot = new TCRobot();
-//        robot.keyPress(KeyEvent.VK_END);
-
-        Mobile.waitForSeconds(1);
-        Thread.sleep(1000);
     }
 
 

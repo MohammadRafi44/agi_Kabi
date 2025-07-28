@@ -29,8 +29,6 @@ public class HomePage extends MobileBasePage {
         logger.info("Click Menu");
         Mobile.waitUntilVisibilityOfElement(HomePageObjects.getButtonMenu(),elementTimeout);
         Mobile.click(HomePageObjects.getButtonMenu());
-        Mobile.waitForSeconds(1);
-        Thread.sleep(1000);
         logger.addScreenshot("After clicking on Menu");
     }
 
