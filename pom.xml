@@ -34,6 +34,18 @@
             <artifactId>maven-resources-plugin</artifactId>
             <version>3.3.1</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.json</groupId>-->
+<!--            <artifactId>json</artifactId>-->
+<!--            <version>20240303</version> &lt;!&ndash; Latest version as of 2024 &ndash;&gt;-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.jsonwebtoken</groupId>-->
+<!--            <artifactId>jjwt</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--        </dependency>-->
+
+
     </dependencies>
 
     <!-- Build Maven -->
@@ -68,6 +80,15 @@
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <mainClass>com.agi.zephyr.ZephyrPublisher</mainClass>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+            </plugin>
         </plugins>
         <resources>
             <resource>
@@ -77,5 +98,6 @@
                 </includes>
             </resource>
         </resources>
+
     </build>
 </project>

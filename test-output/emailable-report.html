@@ -9,26 +9,10 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Test Suite</th></tr>
-<tr><td><a href="#t0">All Web Tests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">182,960</td><td></td><td></td></tr>
+<tr><td><a href="#t0">All Web Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">28,230</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">All Web Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.agi.mobile.suites.sanitypack.Sanity_Suite</td><td><a href="#m0">loginInvalidDriverID</a></td><td rowspan="1">1754461469144</td><td rowspan="1">106328</td></tr><tr><th colspan="4">All Web Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.agi.mobile.suites.sanitypack.Sanity_Suite</td><td><a href="#m1">loginInvalidOtp</a></td><td rowspan="1">1754461578599</td><td rowspan="1">23370</td></tr><tr class="passedeven"><td><a href="#m2">loginValidDriverID</a></td><td rowspan="1">1754461423812</td><td rowspan="1">42593</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">All Web Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.agi.mobile.suites.sanitypack.Sanity_Suite</td><td><a href="#m0">loginInvalidOtp</a></td><td rowspan="1">1754658195943</td><td rowspan="1">24543</td></tr></tbody>
 </table>
-<h2>All Web Tests</h2><h3 id="m0">com.agi.mobile.suites.sanitypack.Sanity_Suite#loginInvalidDriverID</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Driverid=1234567, OTP=123456, InvalidOTP=, Reference=InvalidUser}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.TextView[@text=&quot;User does not exist&quot;] (tried for 100 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appium:appActivity: com.buddysapp.MainActivity, appium:appPackage: com.buddysapp.dev.revamp, appium:autoAcceptAlerts: true, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.buddysapp.MainActivity, appPackage: com.buddysapp.dev.revamp, autoAcceptAlerts: true, autoDismissAlerts: true, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RFCT20FMQYN, fullReset: false, newCommandTimeout: 100000, noReset: true, platformName: ANDROID, unicodeKeyboard: true}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-N981B, appium:deviceName: RFCT20FMQYN, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: RFCT20FMQYN, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:noReset: true, appium:pixelRatio: 2.8125, appium:platformVersion: 13, appium:statBarHeight: 92, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2308, left: 0, top: 92, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: c7101d4a-88fb-4d00-a742-257d4d78fe5e
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at com.alghurair.mobile.Mobile.waitUntilVisibilityOfElement(Mobile.java:179)
-	at com.agi.mobile.pages.LoginPage.validateInvalidDriverLogin(LoginPage.java:112)
-	at com.agi.mobile.suites.sanitypack.Sanity_Suite.loginInvalidDriverID(Sanity_Suite.java:56)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.agi.mobile.suites.sanitypack.Sanity_Suite#loginInvalidOtp</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Driverid=3114791, OTP=, InvalidOTP=111111, Reference=InvalidOtp}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.agi.mobile.suites.sanitypack.Sanity_Suite#loginValidDriverID</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Driverid=3114791, OTP=123456, InvalidOTP=, Reference=ValidUser}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>All Web Tests</h2><h3 id="m0">com.agi.mobile.suites.sanitypack.Sanity_Suite#loginInvalidOtp</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Driverid=3114791, OTP=, InvalidOTP=111111, Reference=InvalidOtp}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
