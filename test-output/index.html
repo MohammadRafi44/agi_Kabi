@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Suite" title="com.agi.mobile.suites.sanitypack.Sanity_Suite" class="method navigator-link" hash-for-method="loginInvalidOtp({Driverid=3114791, OTP=, InvalidOTP=111111, Reference=InvalidOtp})">loginInvalidOtp({Driverid=3114791, OTP=, InvalidOTP=111111, Reference=InvalidOtp})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Test_Suite" title="com.agi.mobile.suites.sanitypack.Sanity_Suite" class="method navigator-link" hash-for-method="loginValidDriverID({Driverid=3114791, OTP=123456, InvalidOTP=, Reference=ValidUser})">loginValidDriverID({Driverid=3114791, OTP=123456, InvalidOTP=, Reference=ValidUser})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Test_Suite -->
@@ -126,15 +126,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginInvalidOtp({Driverid=3114791, OTP=, InvalidOTP=111111, Reference=InvalidOtp})">
-                  </a> <!-- loginInvalidOtp({Driverid=3114791, OTP=, InvalidOTP=111111, Reference=InvalidOtp}) -->
-                  <span class="method-name">loginInvalidOtp</span>
-                  <span class="parameters">({Driverid=3114791, OTP=, InvalidOTP=111111, Reference=InvalidOtp})</span>
+                  <a name="loginValidDriverID({Driverid=3114791, OTP=123456, InvalidOTP=, Reference=ValidUser})">
+                  </a> <!-- loginValidDriverID({Driverid=3114791, OTP=123456, InvalidOTP=, Reference=ValidUser}) -->
+                  <span class="method-name">loginValidDriverID</span>
+                  <span class="parameters">({Driverid=3114791, OTP=123456, InvalidOTP=, Reference=ValidUser})</span>
                   <em>
-(Scenario: Login with invalid OTP on Mobile
-- Given a mobile user has requested an OTP
-- When the user enters an invalid or expired OTP
-- Then an error message should be shown indicating the OTP is invalid or expired)                  </em>
+(Scenario: Login with valid Driver ID on Mobile
+- Given a mobile user exists with a valid Driver ID
+- When the user logs in with correct credentials
+- Then the login should be successful
+- And the user dashboard should be displayed)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -281,14 +282,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginInvalidOtp')
+data.setCell(0, 1, 'loginValidDriverID')
 data.setCell(0, 2, 'com.agi.mobile.suites.sanitypack.Sanity_Suite')
-data.setCell(0, 3, 24543);
+data.setCell(0, 3, 42203);
 window.suiteTableData['Test_Suite']= { tableData: data, tableDiv: 'times-div-Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 seconds</span>
+              <span class="suite-total-time">Total running time: 42 seconds</span>
               <div id="times-div-Test_Suite">
               </div> <!-- times-div-Test_Suite -->
             </div> <!-- times-div -->
@@ -307,96 +308,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.agi.web.login.TC02_Web_LoginInvalid</span>
+              <span class="ignored-class-name">com.agi.web.login.TC01_Web_LoginValid</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">beforeSuiteRewaa</span>
-                <br/>
-                <span class="ignored-method-name">loginInvalid</span>
-                <br/>
-                <span class="ignored-method-name">afterSuite</span>
-                <br/>
-                <span class="ignored-method-name">beforeSuite</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.agi.mobile.suites.TC01_Mobile_LoginInvalid</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">afterSuite</span>
-                <br/>
-                <span class="ignored-method-name">beforeSuiteRewaa</span>
-                <br/>
-                <span class="ignored-method-name">mobileLoginInvalidX</span>
-                <br/>
-                <span class="ignored-method-name">beforeSuite</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.agi.api.login.TC02_API_LoginInvalid</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">beforeSuite</span>
-                <br/>
-                <span class="ignored-method-name">afterSuite</span>
-                <br/>
-                <span class="ignored-method-name">apiLoginInvalid</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.agi.mobile.suites.sanitypack.Sanity_Suite</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">loginValidDriverID</span>
-                <br/>
-                <span class="ignored-method-name">loginInvalidDriverID</span>
+                <span class="ignored-method-name">loginValid</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.agi.mobile.base.AgiMobileTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">beforeSuite</span>
-                <br/>
-                <span class="ignored-method-name">afterSuite</span>
-                <br/>
-                <span class="ignored-method-name">beforeSuiteRewaa</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.agi.web.base.AgiWebTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">beforeSuite</span>
-                <br/>
                 <span class="ignored-method-name">beforeSuiteRewaa</span>
                 <br/>
                 <span class="ignored-method-name">afterSuite</span>
                 <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.agi.api.base.AgiAPITest</span>
-              <div class="ignored-methods-div">
                 <span class="ignored-method-name">beforeSuite</span>
-                <br/>
-                <span class="ignored-method-name">afterSuite</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.agi.mobile.suites.TC01_Mobile_LoginValid</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">beforeSuite</span>
-                <br/>
-                <span class="ignored-method-name">afterSuite</span>
-                <br/>
-                <span class="ignored-method-name">loginInvalidDriverIDX</span>
-                <br/>
-                <span class="ignored-method-name">loginValidDriverIDX</span>
-                <br/>
-                <span class="ignored-method-name">loginInvalidOtpX</span>
-                <br/>
-                <span class="ignored-method-name">beforeSuiteRewaa</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -408,9 +333,85 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.agi.web.login.TC01_Web_LoginValid</span>
+              <span class="ignored-class-name">com.agi.mobile.suites.sanitypack.Sanity_Suite</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">loginValid</span>
+                <span class="ignored-method-name">loginInvalidOtp</span>
+                <br/>
+                <span class="ignored-method-name">loginInvalidDriverID</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.agi.api.login.TC02_API_LoginInvalid</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">apiLoginInvalid</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.agi.mobile.suites.TC01_Mobile_LoginValid</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginInvalidDriverIDX</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">loginValidDriverIDX</span>
+                <br/>
+                <span class="ignored-method-name">loginInvalidOtpX</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuiteRewaa</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.agi.mobile.suites.TC01_Mobile_LoginInvalid</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">mobileLoginInvalidX</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuiteRewaa</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.agi.web.base.AgiWebTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuiteRewaa</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.agi.web.login.TC02_Web_LoginInvalid</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuiteRewaa</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+                <span class="ignored-method-name">loginInvalid</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.agi.api.base.AgiAPITest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -429,61 +430,61 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuiteRewaa</span>
-                <span class="method-start">425 ms</span>
+                <span class="method-start">458 ms</span>
               </div> <!-- configuration-suite before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.agi.web.login.TC01_Web_LoginValid</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
-                <span class="method-start">456 ms</span>
+                <span class="method-start">506 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuiteRewaa</span>
-                <span class="method-start">538 ms</span>
+                <span class="method-start">601 ms</span>
               </div> <!-- configuration-suite before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.agi.api.login.TC01_API_LoginValid</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
-                <span class="method-start">543 ms</span>
+                <span class="method-start">601 ms</span>
               </div> <!-- configuration-suite before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.agi.mobile.suites.sanitypack.Sanity_Suite</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod([TestResult name={null} status=CREATED method=Sanity_Suite.loginInvalidOtp(java.util.Map)[pri:7, ins...)</span>
-                <span class="method-start">734 ms</span>
+                <span class="method-name">beforeMethod([TestResult name={null} status=CREATED method=Sanity_Suite.loginValidDriverID(java.util.Map)[pri:5, ...)</span>
+                <span class="method-start">859 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginInvalidOtp({Driverid=3114791, OTP=, InvalidOTP=111111, Reference=InvalidOtp})</span>
-                <span class="method-start">3912 ms</span>
+                <span class="method-name">loginValidDriverID({Driverid=3114791, OTP=123456, InvalidOTP=, Reference=ValidUser})</span>
+                <span class="method-start">4647 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">28471 ms</span>
+                <span class="method-start">46856 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.agi.api.login.TC01_API_LoginValid</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">29020 ms</span>
+                <span class="method-start">47443 ms</span>
               </div> <!-- configuration-suite after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.agi.mobile.suites.sanitypack.Sanity_Suite</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">29020 ms</span>
+                <span class="method-start">47444 ms</span>
               </div> <!-- configuration-suite after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.agi.web.login.TC01_Web_LoginValid</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">29021 ms</span>
+                <span class="method-start">47446 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

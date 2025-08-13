@@ -68,8 +68,8 @@ public class Sanity_Suite extends AgiMobileTest {
             app.loginPage.selectEnvironment();
         logger.info("Step 02 : Enter Driver Id ");
             app.loginPage.enterDriverid(data.get("Driverid"));
-        logger.info("Step 03 : Click on Generate OTP Button ");
             app.loginPage.clickGenerateOtp();
+        logger.info("Step 03 : Click on Generate OTP Button ");
         logger.info("Step 04 : Enter Invalid OTP ");
             app.loginPage.enterOtp(data.get("InvalidOTP"));
         logger.info("Step 05 : Login & Verify Invalid OTP login message is shown");

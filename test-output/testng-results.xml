@@ -2,83 +2,84 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-08T17:03:12 GST" name="Test Suite" finished-at="2025-08-08T17:03:40 GST" duration-ms="28230">
+  <suite started-at="2025-08-13T11:21:52 GST" name="Test Suite" finished-at="2025-08-13T11:22:38 GST" duration-ms="46561">
     <groups>
     </groups>
-    <test started-at="2025-08-08T17:03:12 GST" name="All Web Tests" finished-at="2025-08-08T17:03:40 GST" duration-ms="28230">
+    <test started-at="2025-08-13T11:21:52 GST" name="All Web Tests" finished-at="2025-08-13T11:22:38 GST" duration-ms="46561">
       <class name="com.agi.api.login.TC01_API_LoginValid">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@653a5a]" started-at="2025-08-08T17:03:12 GST" name="beforeSuite" finished-at="2025-08-08T17:03:12 GST" duration-ms="68" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@367653cc]" started-at="2025-08-13T11:21:52 GST" name="beforeSuite" finished-at="2025-08-13T11:21:52 GST" duration-ms="99" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@653a5a]" started-at="2025-08-08T17:03:41 GST" name="afterSuite" finished-at="2025-08-08T17:03:41 GST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@367653cc]" started-at="2025-08-13T11:22:38 GST" name="afterSuite" finished-at="2025-08-13T11:22:38 GST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.agi.api.login.TC01_API_LoginValid -->
       <class name="com.agi.mobile.suites.sanitypack.Sanity_Suite">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@16eca98a]" started-at="2025-08-08T17:03:12 GST" name="beforeSuite" finished-at="2025-08-08T17:03:12 GST" duration-ms="424" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@5dfb65d5]" started-at="2025-08-13T11:21:51 GST" name="beforeSuite" finished-at="2025-08-13T11:21:51 GST" duration-ms="458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@16eca98a]" started-at="2025-08-08T17:03:12 GST" name="beforeSuiteRewaa" finished-at="2025-08-08T17:03:12 GST" depends-on-methods="com.alghurair.base.MobileBaseTest.beforeSuite" duration-ms="31" status="PASS">
+        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@5dfb65d5]" started-at="2025-08-13T11:21:51 GST" name="beforeSuiteRewaa" finished-at="2025-08-13T11:21:52 GST" depends-on-methods="com.alghurair.base.MobileBaseTest.beforeSuite" duration-ms="48" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuiteRewaa -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@16eca98a]" started-at="2025-08-08T17:03:12 GST" name="beforeMethod" finished-at="2025-08-08T17:03:15 GST" duration-ms="3178" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@5dfb65d5]" started-at="2025-08-13T11:21:52 GST" name="beforeMethod" finished-at="2025-08-13T11:21:56 GST" duration-ms="3788" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=Sanity_Suite.loginInvalidOtp(java.util.Map)[pri:7, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@16eca98a] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=Sanity_Suite.loginValidDriverID(java.util.Map)[pri:5, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@5dfb65d5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@44f86613]]>
+                <![CDATA[org.testng.TestRunner@3d587c73]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[Ljava.lang.Object;@5e05dd42]]>
+                <![CDATA[[Ljava.lang.Object;@7220ff10]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginInvalidOtp(java.util.Map)[pri:7, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@16eca98a]" started-at="2025-08-08T17:03:15 GST" name="loginInvalidOtp" description="Scenario: Login with invalid OTP on Mobile
-- Given a mobile user has requested an OTP
-- When the user enters an invalid or expired OTP
-- Then an error message should be shown indicating the OTP is invalid or expired" data-provider="testDataProvider" finished-at="2025-08-08T17:03:40 GST" duration-ms="24543" status="PASS">
+        <test-method signature="loginValidDriverID(java.util.Map)[pri:5, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@5dfb65d5]" started-at="2025-08-13T11:21:56 GST" name="loginValidDriverID" description="Scenario: Login with valid Driver ID on Mobile
+- Given a mobile user exists with a valid Driver ID
+- When the user logs in with correct credentials
+- Then the login should be successful
+- And the user dashboard should be displayed" data-provider="testDataProvider" finished-at="2025-08-13T11:22:38 GST" duration-ms="42203" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Driverid=3114791, OTP=, InvalidOTP=111111, Reference=InvalidOtp}]]>
+                <![CDATA[{Driverid=3114791, OTP=123456, InvalidOTP=, Reference=ValidUser}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginInvalidOtp -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@16eca98a]" started-at="2025-08-08T17:03:40 GST" name="afterMethod" finished-at="2025-08-08T17:03:40 GST" duration-ms="371" status="PASS">
+        </test-method> <!-- loginValidDriverID -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@5dfb65d5]" started-at="2025-08-13T11:22:38 GST" name="afterMethod" finished-at="2025-08-13T11:22:38 GST" duration-ms="403" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@16eca98a]" started-at="2025-08-08T17:03:41 GST" name="afterSuite" finished-at="2025-08-08T17:03:41 GST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@5dfb65d5]" started-at="2025-08-13T11:22:38 GST" name="afterSuite" finished-at="2025-08-13T11:22:38 GST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.agi.mobile.suites.sanitypack.Sanity_Suite -->
       <class name="com.agi.web.login.TC01_Web_LoginValid">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@6c4c32ff]" started-at="2025-08-08T17:03:12 GST" name="beforeSuite" finished-at="2025-08-08T17:03:12 GST" duration-ms="81" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@34f3c920]" started-at="2025-08-13T11:21:52 GST" name="beforeSuite" finished-at="2025-08-13T11:21:52 GST" duration-ms="95" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@6c4c32ff]" started-at="2025-08-08T17:03:12 GST" name="beforeSuiteRewaa" finished-at="2025-08-08T17:03:12 GST" depends-on-methods="com.alghurair.base.WebBaseTest.beforeSuite" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@34f3c920]" started-at="2025-08-13T11:21:52 GST" name="beforeSuiteRewaa" finished-at="2025-08-13T11:21:52 GST" depends-on-methods="com.alghurair.base.WebBaseTest.beforeSuite" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuiteRewaa -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@6c4c32ff]" started-at="2025-08-08T17:03:41 GST" name="afterSuite" finished-at="2025-08-08T17:03:41 GST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@34f3c920]" started-at="2025-08-13T11:22:38 GST" name="afterSuite" finished-at="2025-08-13T11:22:38 GST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

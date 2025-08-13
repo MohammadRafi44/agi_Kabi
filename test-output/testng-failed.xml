@@ -9,9 +9,9 @@
     <classes>
       <class name="com.agi.mobile.suites.sanitypack.Sanity_Suite">
         <methods>
+          <include name="loginInvalidDriverID" invocation-numbers="0"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="loginInvalidOtp" invocation-numbers="0"/>
           <include name="afterSuite"/>
           <include name="beforeSuite"/>
           <include name="beforeSuiteRewaa"/>
