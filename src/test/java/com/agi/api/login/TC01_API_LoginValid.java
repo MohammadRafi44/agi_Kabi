@@ -2,6 +2,7 @@ package com.agi.api.login;
 
 import java.util.Map;
 
+import com.alghurair.mobile.Mobile;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import org.testng.Assert;
@@ -20,7 +21,6 @@ public class TC01_API_LoginValid extends AgiAPITest {
 
         logger.info("Step 02: Validate Complete Response");
         api.loginApi.assertLoginResponse(data);
-
         logger.info("Step 03: Validate Specific Response");
         String token = String.valueOf(response.getBody().getObject().getString("token"));
         Assert.assertNotEquals(token, "", "Response body token.");

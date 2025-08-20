@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 13 11:21:52 GST 2025</td>
+<td>Started on:</td><td>Wed Aug 13 17:02:52 GST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>46 seconds (46561 ms)</td>
+<tr><td>Total time:</td><td>76 seconds (76506 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,77 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.agi.mobile.suites.sanitypack.Sanity_Suite.loginInvalidOtp()'><b>loginInvalidOtp</b><br>Test class: com.agi.mobile.suites.sanitypack.Sanity_Suite<br>Test method: Scenario: Login with invalid OTP on Mobile
+- Given a mobile user has requested an OTP
+- When the user enters an invalid or expired OTP
+- Then an error message should be shown indicating the OTP is invalid or expired<br>Parameters: {Driverid=3114791, OTP=, InvalidOTP=, Username=, Reference=InvalidOtp, Password=}</td>
+<td><div><pre>java.lang.IllegalArgumentException: OTP must be exactly 6 digits
+	at com.agi.mobile.pages.LoginPage.enterOtp(LoginPage.java:122)
+	at com.agi.mobile.suites.sanitypack.Sanity_Suite.loginInvalidOtp(Sanity_Suite.java:74)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace970480649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace970480649'><pre>java.lang.IllegalArgumentException: OTP must be exactly 6 digits
+	at com.agi.mobile.pages.LoginPage.enterOtp(LoginPage.java:122)
+	at com.agi.mobile.suites.sanitypack.Sanity_Suite.loginInvalidOtp(Sanity_Suite.java:74)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678</td></tr>
+<tr>
+<td title='com.agi.web.login.TC02_Web_LoginInvalid.loginInvalid()'><b>loginInvalid</b><br>Test class: com.agi.web.login.TC02_Web_LoginInvalid<br>Parameters: {Driverid=, OTP=, InvalidOTP=, Username=Admin, Reference=webInvalidUser, Password=11111111}</td>
+<td><div><pre>java.lang.AssertionError: Error message displayed. expected [true] but found [false]
+	at com.agi.web.pages.LoginPage.assertErrorDisplayedInvalidCredentials(LoginPage.java:96)
+	at com.agi.web.login.TC02_Web_LoginInvalid.loginInvalid(TC02_Web_LoginInvalid.java:21)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace476790838", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace476790838'><pre>java.lang.AssertionError: Error message displayed. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.agi.web.pages.LoginPage.assertErrorDisplayedInvalidCredentials(LoginPage.java:96)
+	at com.agi.web.login.TC02_Web_LoginInvalid.loginInvalid(TC02_Web_LoginInvalid.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>5</td>
+<td>com.agi.web.login.TC02_Web_LoginInvalid@347f0950</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,14 +147,29 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.agi.web.login.TC01_Web_LoginValid.loginValid()'><b>loginValid</b><br>Test class: com.agi.web.login.TC01_Web_LoginValid<br>Parameters: {SSNNumber=78879, TestMethodName=loginValid, Reference=UpdateValid, FirstName=FirstName, SINNumber=5565665456, OTP=, Gender=Male, MiddleName=MiddleName, OtherID=123456, Nationality=Saudi, MaritalStatus=Single, Driverid=, InvalidOTP=, Username=Admin, Smoker=Yes, DLNumber=231568645, LastName=LastName, EmployeeID=101, Password=admin123}</td>
+<td></td>
+<td>11</td>
+<td>com.agi.web.login.TC01_Web_LoginValid@3bbb3c84</td></tr>
+<tr>
 <td title='com.agi.mobile.suites.sanitypack.Sanity_Suite.loginValidDriverID()'><b>loginValidDriverID</b><br>Test class: com.agi.mobile.suites.sanitypack.Sanity_Suite<br>Test method: Scenario: Login with valid Driver ID on Mobile
 - Given a mobile user exists with a valid Driver ID
 - When the user logs in with correct credentials
 - Then the login should be successful
-- And the user dashboard should be displayed<br>Parameters: {Driverid=3114791, OTP=123456, InvalidOTP=, Reference=ValidUser}</td>
+- And the user dashboard should be displayed<br>Parameters: {Driverid=3114791, OTP=123456, InvalidOTP=, Username=, Reference=ValidUser, Password=}</td>
 <td></td>
-<td>42</td>
-<td>com.agi.mobile.suites.sanitypack.Sanity_Suite@5dfb65d5</td></tr>
+<td>40</td>
+<td>com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678</td></tr>
+<tr>
+<td title='com.agi.api.login.TC02_API_LoginInvalid.apiLoginInvalid()'><b>apiLoginInvalid</b><br>Test class: com.agi.api.login.TC02_API_LoginInvalid<br>Parameters: {Driverid=, OTP=, InvalidOTP=, Username=Admin, Reference=APIInvalidUser, Password=11111111}</td>
+<td></td>
+<td>0</td>
+<td>com.agi.api.login.TC02_API_LoginInvalid@31d791c0</td></tr>
+<tr>
+<td title='com.agi.api.login.TC01_API_LoginValid.apiLoginValid()'><b>apiLoginValid</b><br>Test class: com.agi.api.login.TC01_API_LoginValid<br>Parameters: {Driverid=, OTP=, InvalidOTP=, Username=admin, Reference=APIValidUser, Password=password123}</td>
+<td></td>
+<td>1</td>
+<td>com.agi.api.login.TC01_API_LoginValid@75a5a912</td></tr>
 </table><p>
 </body>
 </html>

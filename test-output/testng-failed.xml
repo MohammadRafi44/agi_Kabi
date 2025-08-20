@@ -9,14 +9,24 @@
     <classes>
       <class name="com.agi.mobile.suites.sanitypack.Sanity_Suite">
         <methods>
-          <include name="loginInvalidDriverID" invocation-numbers="0"/>
           <include name="afterMethod"/>
+          <include name="loginInvalidOtp" invocation-numbers="0"/>
           <include name="beforeMethod"/>
           <include name="afterSuite"/>
           <include name="beforeSuite"/>
           <include name="beforeSuiteRewaa"/>
         </methods>
       </class> <!-- com.agi.mobile.suites.sanitypack.Sanity_Suite -->
+      <class name="com.agi.web.login.TC02_Web_LoginInvalid">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="loginInvalid" invocation-numbers="0"/>
+          <include name="beforeSuiteRewaa"/>
+        </methods>
+      </class> <!-- com.agi.web.login.TC02_Web_LoginInvalid -->
     </classes>
   </test> <!-- All Web Tests(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->
