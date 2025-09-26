@@ -1,5 +1,4 @@
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.agi</groupId>
@@ -13,7 +12,7 @@
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
 
-       <!----> <crew-centric-framework>2025.1.0</crew-centric-framework>
+        <crew-centric-framework>2025.1.0</crew-centric-framework>
         <alghurair-centric-framework>2025.1.0</alghurair-centric-framework>
         <maven-jar-plugin>3.2.0</maven-jar-plugin>
         <maven-compiler-plugin>3.11.0</maven-compiler-plugin>
@@ -44,6 +43,12 @@
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>io.jsonwebtokensd</groupId>-->
+<!--            <artifactId>jjwtsdf</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--        </dependency>-->
 
 
     </dependencies>
@@ -89,6 +94,18 @@
                     <cleanupDaemonThreads>false</cleanupDaemonThreads>
                 </configuration>
             </plugin>
+            <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.3.0</version>
+        <executions>
+          <execution>
+            <id>getClasspathFilenames</id>
+            <goals>
+              <goal>properties</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
         </plugins>
         <resources>
             <resource>

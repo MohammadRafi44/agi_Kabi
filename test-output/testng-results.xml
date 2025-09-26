@@ -1,211 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-13T17:02:52 GST" name="Test Suite" finished-at="2025-08-13T17:04:08 GST" duration-ms="76506">
+  <suite started-at="2025-09-26T15:16:53 GST" name="Test Suite" finished-at="2025-09-26T15:21:04 GST" duration-ms="251597">
     <groups>
     </groups>
-    <test started-at="2025-08-13T17:02:52 GST" name="All Web Tests" finished-at="2025-08-13T17:04:08 GST" duration-ms="76506">
-      <class name="com.agi.api.login.TC01_API_LoginValid">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@75a5a912]" started-at="2025-08-13T17:02:52 GST" name="beforeSuite" finished-at="2025-08-13T17:02:52 GST" duration-ms="46" status="PASS">
+    <test started-at="2025-09-26T15:16:53 GST" name="All Web Tests" finished-at="2025-09-26T15:21:04 GST" duration-ms="251597">
+      <class name="com.agi.E2E.suites.cafmE2ESuite">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@44f86613]" started-at="2025-09-26T15:16:52 GST" name="beforeSuite" finished-at="2025-09-26T15:16:52 GST" duration-ms="115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@75a5a912]" started-at="2025-08-13T17:03:13 GST" name="beforeMethod" finished-at="2025-08-13T17:03:13 GST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=TC01_API_LoginValid.apiLoginValid(java.util.Map)[pri:3, instance:com.agi.api.login.TC01_API_LoginValid@75a5a912] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@2c6c6b7b]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@3d587c73]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="apiLoginValid(java.util.Map)[pri:3, instance:com.agi.api.login.TC01_API_LoginValid@75a5a912]" started-at="2025-08-13T17:03:13 GST" name="apiLoginValid" data-provider="testDataProvider" finished-at="2025-08-13T17:03:14 GST" duration-ms="1834" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Driverid=, OTP=, InvalidOTP=, Username=admin, Reference=APIValidUser, Password=password123}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- apiLoginValid -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@75a5a912]" started-at="2025-08-13T17:03:14 GST" name="afterMethod" finished-at="2025-08-13T17:03:14 GST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.api.login.TC01_API_LoginValid@75a5a912]" started-at="2025-08-13T17:04:08 GST" name="afterSuite" finished-at="2025-08-13T17:04:08 GST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.agi.api.login.TC01_API_LoginValid -->
-      <class name="com.agi.web.login.TC02_Web_LoginInvalid">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.web.login.TC02_Web_LoginInvalid@347f0950]" started-at="2025-08-13T17:03:05 GST" name="beforeMethod" finished-at="2025-08-13T17:03:07 GST" duration-ms="1854" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=TC02_Web_LoginInvalid.loginInvalid(java.util.Map)[pri:2, instance:com.agi.web.login.TC02_Web_LoginInvalid@347f0950] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@2c6c6b7b]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@25f3207e]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="loginInvalid(java.util.Map)[pri:2, instance:com.agi.web.login.TC02_Web_LoginInvalid@347f0950]" started-at="2025-08-13T17:03:07 GST" name="loginInvalid" data-provider="testDataProvider" finished-at="2025-08-13T17:03:12 GST" duration-ms="5427" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Driverid=, OTP=, InvalidOTP=, Username=Admin, Reference=webInvalidUser, Password=11111111}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Error message displayed. expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Error message displayed. expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.agi.web.pages.LoginPage.assertErrorDisplayedInvalidCredentials(LoginPage.java:96)
-at com.agi.web.login.TC02_Web_LoginInvalid.loginInvalid(TC02_Web_LoginInvalid.java:21)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginInvalid -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.web.login.TC02_Web_LoginInvalid@347f0950]" started-at="2025-08-13T17:03:12 GST" name="afterMethod" finished-at="2025-08-13T17:03:12 GST" duration-ms="197" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.agi.web.login.TC02_Web_LoginInvalid -->
-      <class name="com.agi.mobile.suites.sanitypack.Sanity_Suite">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678]" started-at="2025-08-13T17:02:51 GST" name="beforeSuite" finished-at="2025-08-13T17:02:52 GST" duration-ms="194" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678]" started-at="2025-08-13T17:02:52 GST" name="beforeSuiteRewaa" finished-at="2025-08-13T17:02:52 GST" depends-on-methods="com.alghurair.base.MobileBaseTest.beforeSuite" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@44f86613]" started-at="2025-09-26T15:16:52 GST" name="beforeSuiteRewaa" finished-at="2025-09-26T15:16:52 GST" depends-on-methods="com.alghurair.base.WebBaseTest.beforeSuite" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuiteRewaa -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678]" started-at="2025-08-13T17:03:15 GST" name="beforeMethod" finished-at="2025-08-13T17:03:18 GST" duration-ms="2821" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@44f86613]" started-at="2025-09-26T15:21:04 GST" name="afterSuite" finished-at="2025-09-26T15:21:04 GST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.agi.E2E.suites.cafmE2ESuite -->
+      <class name="com.agi.api.suites.regressionpack.regressionSuite">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.api.suites.regressionpack.regressionSuite@4eda5325]" started-at="2025-09-26T15:16:52 GST" name="beforeSuite" finished-at="2025-09-26T15:16:53 GST" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.api.suites.regressionpack.regressionSuite@4eda5325]" started-at="2025-09-26T15:21:04 GST" name="afterSuite" finished-at="2025-09-26T15:21:04 GST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.agi.api.suites.regressionpack.regressionSuite -->
+      <class name="com.agi.mobile.suites.sanitypack.sanitySuite">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:16:52 GST" name="beforeSuite" finished-at="2025-09-26T15:16:52 GST" duration-ms="597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:16:52 GST" name="beforeSuiteRewaa" finished-at="2025-09-26T15:16:52 GST" depends-on-methods="com.alghurair.base.MobileBaseTest.beforeSuite" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuiteRewaa -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:16:53 GST" name="beforeMethod" finished-at="2025-09-26T15:17:20 GST" duration-ms="27217" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=Sanity_Suite.loginValidDriverID(java.util.Map)[pri:5, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=sanitySuite.loginValidDriverID(java.util.Map)[pri:5, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@2c6c6b7b]]>
+                <![CDATA[org.testng.TestRunner@4285b1bd]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[Ljava.lang.Object;@776eb512]]>
+                <![CDATA[[Ljava.lang.Object;@539a50ea]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginValidDriverID(java.util.Map)[pri:5, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678]" started-at="2025-08-13T17:03:18 GST" name="loginValidDriverID" description="Scenario: Login with valid Driver ID on Mobile
+        <test-method signature="loginValidDriverID(java.util.Map)[pri:5, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:17:20 GST" name="loginValidDriverID" description="Scenario: Login with valid Driver ID on Mobile
 - Given a mobile user exists with a valid Driver ID
 - When the user logs in with correct credentials
 - Then the login should be successful
-- And the user dashboard should be displayed" data-provider="testDataProvider" finished-at="2025-08-13T17:03:58 GST" duration-ms="40236" status="PASS">
+- And the user dashboard should be displayed" data-provider="testDataProvider" finished-at="2025-09-26T15:19:36 GST" duration-ms="136282" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Driverid=3114791, OTP=123456, InvalidOTP=, Username=, Reference=ValidUser, Password=}]]>
+                <![CDATA[{AssignedTechnician=, OTP=123456, ItemBarCode=, URL=, ShortDescription=, IsRecurring=, Driverid=3114791, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=, PropertyName=, Reference=ValidUser, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=, Username=, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginValidDriverID -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678]" started-at="2025-08-13T17:03:58 GST" name="afterMethod" finished-at="2025-08-13T17:03:59 GST" duration-ms="355" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678]" started-at="2025-08-13T17:03:59 GST" name="beforeMethod" finished-at="2025-08-13T17:04:01 GST" duration-ms="2335" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=Sanity_Suite.loginInvalidOtp(java.util.Map)[pri:7, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@2c6c6b7b]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@4ba29b51]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="loginInvalidOtp(java.util.Map)[pri:7, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678]" started-at="2025-08-13T17:04:01 GST" name="loginInvalidOtp" description="Scenario: Login with invalid OTP on Mobile
-- Given a mobile user has requested an OTP
-- When the user enters an invalid or expired OTP
-- Then an error message should be shown indicating the OTP is invalid or expired" data-provider="testDataProvider" finished-at="2025-08-13T17:04:08 GST" duration-ms="6787" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Driverid=3114791, OTP=, InvalidOTP=, Username=, Reference=InvalidOtp, Password=}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IllegalArgumentException">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[OTP must be exactly 6 digits]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.TextView[@text="󰍜"] (tried for 100 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.buddysapp.MainActivity, appium:appPackage: com.buddysapp.dev.revamp, appium:autoAcceptAlerts: true, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: uiautomator2, appium:build: agi-build-1, appium:bundleID: com.buddysapp.dev.revamp, appium:bundleId: com.buddysapp.dev.revamp, appium:chromedriverArgs: [--adb-port=5038], appium:chromedriverPorts: [[18144, 18154]], appium:databaseEnabled: false, appium:desired: {appActivity: com.buddysapp.MainActivity, appPackage: com.buddysapp.dev.revamp, autoAcceptAlerts: true, autoDismissAlerts: true, autoGrantPermissions: true, automationName: uiautomator2, build: agi-build-1, bundleID: com.buddysapp.dev.revamp, bundleId: com.buddysapp.dev.revamp, chromedriverArgs: [--adb-port=5038], chromedriverPorts: [[18144, 18154]], deviceName: samsung galaxy s23, disableSuppressAccessibilityService: true, goog:chromeOptions: {}, name: test, nativeWebScreenshot: true, newCommandTimeout: 100000, noReset: true, platformName: Android, project: agi-mobile, resetKeyboard: true, skipServerInstallation: true, systemPort: 8204, udid: RZCWA24PFCH, unicodeKeyboard: true}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-S911B, appium:deviceName: RZCWA24PFCH, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: RZCWA24PFCH, appium:disableSuppressAccessibilityService: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:name: test, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:noReset: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:project: agi-mobile, appium:resetKeyboard: true, appium:skipServerInstallation: true, appium:statBarHeight: 81, appium:systemPort: 8204, appium:takesScreenshot: true, appium:udid: RZCWA24PFCH, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2034, left: 0, top: 81, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, goog:chromeOptions: {}, platformName: ANDROID}
+Session ID: edfd0bee92b66beb82658ce5f43704fd7cc09222]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: OTP must be exactly 6 digits
-at com.agi.mobile.pages.LoginPage.enterOtp(LoginPage.java:122)
-at com.agi.mobile.suites.sanitypack.Sanity_Suite.loginInvalidOtp(Sanity_Suite.java:74)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.TextView[@text="󰍜"] (tried for 100 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.buddysapp.MainActivity, appium:appPackage: com.buddysapp.dev.revamp, appium:autoAcceptAlerts: true, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: uiautomator2, appium:build: agi-build-1, appium:bundleID: com.buddysapp.dev.revamp, appium:bundleId: com.buddysapp.dev.revamp, appium:chromedriverArgs: [--adb-port=5038], appium:chromedriverPorts: [[18144, 18154]], appium:databaseEnabled: false, appium:desired: {appActivity: com.buddysapp.MainActivity, appPackage: com.buddysapp.dev.revamp, autoAcceptAlerts: true, autoDismissAlerts: true, autoGrantPermissions: true, automationName: uiautomator2, build: agi-build-1, bundleID: com.buddysapp.dev.revamp, bundleId: com.buddysapp.dev.revamp, chromedriverArgs: [--adb-port=5038], chromedriverPorts: [[18144, 18154]], deviceName: samsung galaxy s23, disableSuppressAccessibilityService: true, goog:chromeOptions: {}, name: test, nativeWebScreenshot: true, newCommandTimeout: 100000, noReset: true, platformName: Android, project: agi-mobile, resetKeyboard: true, skipServerInstallation: true, systemPort: 8204, udid: RZCWA24PFCH, unicodeKeyboard: true}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-S911B, appium:deviceName: RZCWA24PFCH, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: RZCWA24PFCH, appium:disableSuppressAccessibilityService: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:name: test, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:noReset: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:project: agi-mobile, appium:resetKeyboard: true, appium:skipServerInstallation: true, appium:statBarHeight: 81, appium:systemPort: 8204, appium:takesScreenshot: true, appium:udid: RZCWA24PFCH, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2034, left: 0, top: 81, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, goog:chromeOptions: {}, platformName: ANDROID}
+Session ID: edfd0bee92b66beb82658ce5f43704fd7cc09222
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.alghurair.mobile.Mobile.waitUntilVisibilityOfElement(Mobile.java:185)
+at com.agi.mobile.pages.LoginPage.login(LoginPage.java:99)
+at com.agi.mobile.suites.sanitypack.sanitySuite.loginValidDriverID(sanitySuite.java:30)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -221,107 +108,97 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidDriverID -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:19:36 GST" name="afterMethod" finished-at="2025-09-26T15:19:38 GST" duration-ms="1330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:19:38 GST" name="beforeMethod" finished-at="2025-09-26T15:19:53 GST" duration-ms="15614" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=sanitySuite.loginInvalidDriverID(java.util.Map)[pri:6, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@4285b1bd]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@4caeeab6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginInvalidDriverID(java.util.Map)[pri:6, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:19:53 GST" name="loginInvalidDriverID" description="Scenario: Login with invalid Driver ID on Mobile
+- Given a mobile user enters an invalid Driver ID
+- When the user attempts to log in
+- Then an error message should be displayed indicating the user does not exist" data-provider="testDataProvider" finished-at="2025-09-26T15:20:07 GST" duration-ms="13380" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{AssignedTechnician=, OTP=123456, ItemBarCode=, URL=, ShortDescription=, IsRecurring=, Driverid=1234567, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=, PropertyName=, Reference=InvalidUser, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=111111, Username=, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInvalidDriverID -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:20:07 GST" name="afterMethod" finished-at="2025-09-26T15:20:08 GST" duration-ms="1488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:20:08 GST" name="beforeMethod" finished-at="2025-09-26T15:20:26 GST" duration-ms="17622" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=sanitySuite.loginInvalidOtp(java.util.Map)[pri:7, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@4285b1bd]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@22027e62]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginInvalidOtp(java.util.Map)[pri:7, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:20:26 GST" name="loginInvalidOtp" description="Scenario: Login with invalid OTP on Mobile
+- Given a mobile user has requested an OTP
+- When the user enters an invalid or expired OTP
+- Then an error message should be shown indicating the OTP is invalid or expired" data-provider="testDataProvider" finished-at="2025-09-26T15:21:03 GST" duration-ms="36828" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{AssignedTechnician=, OTP=, ItemBarCode=, URL=, ShortDescription=, IsRecurring=, Driverid=3114791, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=, PropertyName=, Reference=InvalidOtp, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=111111, Username=, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginInvalidOtp -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678]" started-at="2025-08-13T17:04:08 GST" name="afterMethod" finished-at="2025-08-13T17:04:08 GST" duration-ms="364" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:21:03 GST" name="afterMethod" finished-at="2025-09-26T15:21:04 GST" duration-ms="1437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.Sanity_Suite@45c10678]" started-at="2025-08-13T17:04:08 GST" name="afterSuite" finished-at="2025-08-13T17:04:08 GST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5]" started-at="2025-09-26T15:21:04 GST" name="afterSuite" finished-at="2025-09-26T15:21:04 GST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.agi.mobile.suites.sanitypack.Sanity_Suite -->
-      <class name="com.agi.api.login.TC02_API_LoginInvalid">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.api.login.TC02_API_LoginInvalid@31d791c0]" started-at="2025-08-13T17:03:14 GST" name="beforeMethod" finished-at="2025-08-13T17:03:14 GST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=TC02_API_LoginInvalid.apiLoginInvalid(java.util.Map)[pri:4, instance:com.agi.api.login.TC02_API_LoginInvalid@31d791c0] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@2c6c6b7b]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@7220ff10]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="apiLoginInvalid(java.util.Map)[pri:4, instance:com.agi.api.login.TC02_API_LoginInvalid@31d791c0]" started-at="2025-08-13T17:03:14 GST" name="apiLoginInvalid" data-provider="testDataProvider" finished-at="2025-08-13T17:03:15 GST" duration-ms="491" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Driverid=, OTP=, InvalidOTP=, Username=Admin, Reference=APIInvalidUser, Password=11111111}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- apiLoginInvalid -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.api.login.TC02_API_LoginInvalid@31d791c0]" started-at="2025-08-13T17:03:15 GST" name="afterMethod" finished-at="2025-08-13T17:03:15 GST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.agi.api.login.TC02_API_LoginInvalid -->
-      <class name="com.agi.web.login.TC01_Web_LoginValid">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@3bbb3c84]" started-at="2025-08-13T17:02:52 GST" name="beforeSuite" finished-at="2025-08-13T17:02:52 GST" duration-ms="51" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@3bbb3c84]" started-at="2025-08-13T17:02:52 GST" name="beforeSuiteRewaa" finished-at="2025-08-13T17:02:52 GST" depends-on-methods="com.alghurair.base.WebBaseTest.beforeSuite" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuiteRewaa -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@3bbb3c84]" started-at="2025-08-13T17:02:52 GST" name="beforeMethod" finished-at="2025-08-13T17:02:53 GST" duration-ms="1147" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=TC01_Web_LoginValid.loginValid(java.util.Map)[pri:1, instance:com.agi.web.login.TC01_Web_LoginValid@3bbb3c84] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@2c6c6b7b]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@f714749]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="loginValid(java.util.Map)[pri:1, instance:com.agi.web.login.TC01_Web_LoginValid@3bbb3c84]" started-at="2025-08-13T17:02:53 GST" name="loginValid" data-provider="testDataProvider" finished-at="2025-08-13T17:03:04 GST" duration-ms="11283" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{SSNNumber=78879, TestMethodName=loginValid, Reference=UpdateValid, FirstName=FirstName, SINNumber=5565665456, OTP=, Gender=Male, MiddleName=MiddleName, OtherID=123456, Nationality=Saudi, MaritalStatus=Single, Driverid=, InvalidOTP=, Username=Admin, Smoker=Yes, DLNumber=231568645, LastName=LastName, EmployeeID=101, Password=admin123}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginValid -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@3bbb3c84]" started-at="2025-08-13T17:03:04 GST" name="afterMethod" finished-at="2025-08-13T17:03:05 GST" duration-ms="233" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@3bbb3c84]" started-at="2025-08-13T17:04:08 GST" name="afterSuite" finished-at="2025-08-13T17:04:08 GST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.agi.web.login.TC01_Web_LoginValid -->
+      </class> <!-- com.agi.mobile.suites.sanitypack.sanitySuite -->
     </test> <!-- All Web Tests -->
   </suite> <!-- Test Suite -->
 </testng-results>

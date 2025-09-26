@@ -82,9 +82,14 @@ public class MyInfoPage extends WebBasePage {
     }
 
     public void assertSuccessMessageDisplayed() throws Exception {
-        Browser.waitForSeconds(1);
-        logger.addScreenshot("Success Banner");
-        Assert.assertTrue(isSuccessMessageDisplayed(), "Success not displayed.");
-        logger.addPassLabel("Success displayed");
+        Browser.waitForSeconds(2);
+        try {
+            Assert.assertTrue(isSuccessMessageDisplayed(), "Success not displayed.");
+            logger.addPassLabel("Success displayed");   // only logged if assert passes
+        } catch (AssertionError e) {
+            logger.addScreenshot("Test Failed");        // extra screenshot for debugging
+            logger.addFailLabel(e.getMessage());        // mark step as failed in Extent
+            throw e;                                    // rethrow so the test really fails
+        }
     }
 }

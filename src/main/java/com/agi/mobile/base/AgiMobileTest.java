@@ -24,6 +24,12 @@ public class AgiMobileTest extends AlGhurairMobileBaseTest {
             desiredCapabilities.setCapability("project", TestConfigManager.getTestSettingsMobileBrowserStackProject());
             desiredCapabilities.setCapability("build", TestConfigManager.getTestSettingsMobileBrowserStackBuild());
             desiredCapabilities.setCapability("name", "Test");
+
+            // 🔑 Add this (BrowserStack authentication)
+            desiredCapabilities.setCapability("browserstack.user",
+                    TestConfigManager.getConfigProperty("settings.mobile.browserstack.username"));
+            desiredCapabilities.setCapability("browserstack.key",
+                    TestConfigManager.getConfigProperty("settings.mobile.browserstack.access.key"));
         }
 
         desiredCapabilities.setCapability("deviceName", TestConfigManager.getTestSettingsMobileDeviceName());
@@ -42,6 +48,7 @@ public class AgiMobileTest extends AlGhurairMobileBaseTest {
         desiredCapabilities.setCapability("autoDismissAlerts", "true");
         desiredCapabilities.setCapability("autoGrantPermissions", "true");
         desiredCapabilities.setCapability("unicodeKeyboard", "true");
+        desiredCapabilities.setCapability("skipServerInstallation","false");
 //        desiredCapabilities.setCapability("resetKeyboard", "true");
 
 //        desiredCapabilities.setCapability("autoWebview", "true");

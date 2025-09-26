@@ -100,13 +100,9 @@ public class LoginPageObjects {
             put("ar", "//android.widget.TextView[@text=\"OTP entered is either expired or incorrect. Please navigate to Login Page & Generate OTP again\"]");
         }});
         put("text-InvalidDriverErrorMessage", new HashMap<>() {{
-            put("en", "//android.widget.TextView[@text=\"User does not exist\"]");
-            put("ar", "//android.widget.TextView[@text=\"User does not exist\"]");
+            put("en", "//android.widget.TextView[@text=\"No Driver found with this Driver ID\"]\n");
+            put("ar", "//android.widget.TextView[@text=\"No Driver found with this Driver ID\"]\n");
         }});
-
-
-
-
     }};
 
     public static String get(String locator) throws Exception {

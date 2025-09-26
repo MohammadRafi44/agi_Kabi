@@ -33,6 +33,24 @@ public class LoginPage extends WebBasePage {
         logger.info("Click Login");
         Browser.click(LoginPageObjects.getButtonLogin());
     }
+    //cafm-uat web ui login methods
+    public void enterCafmUsername(String username) throws Exception {
+        logger.info("Enter Username as " + username);
+        Browser.setText(LoginPageObjects.getTextcafmUsername(), username);
+        Browser.waitForSeconds(1);
+        logger.addScreenshot("After Username");
+    }
+
+    public void enterCafmPassword(String password) throws Exception {
+        logger.info("Enter Password as " + password);
+        Browser.setText(LoginPageObjects.getTextcafmPassword(), password);
+        Browser.waitForSeconds(1);
+    }
+
+    public void clickCafmLogin() throws Exception {
+        logger.info("Click Login");
+        Browser.click(LoginPageObjects.getButtonCafmLogin());
+    }
 
     /**
      * Page function
@@ -64,7 +82,7 @@ public class LoginPage extends WebBasePage {
      * A Wait function is the one which waits for certain event on that page.
      */
     public void waitForPageLoad() throws Exception {
-        Browser.waitUntilVisibilityOfElement(LoginPageObjects.getButtonLogin(), elementTimeout);
+        Browser.waitUntilVisibilityOfElement(LoginPageObjects.getButtonCafmLogin(), elementTimeout);
     }
 
     /**

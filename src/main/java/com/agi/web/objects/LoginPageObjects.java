@@ -44,6 +44,22 @@ public class LoginPageObjects {
             put("en", "//input[@name='password']");
             put("ar", "//input[@name='password']");
         }});
+        //cafm uat web ui objects
+        //user name - cafm login page
+        put("cafm-username", new HashMap<>() {{
+            put("en", "//input[@id='ctl00_contentPlaceHolder_loginControl_UserName']");
+            put("ar", "//input[@id='ctl00_contentPlaceHolder_loginControl_UserName']");
+        }});
+        //password - cafm login page
+        put("cafm-password", new HashMap<>() {{
+            put("en", "//input[@id='ctl00_contentPlaceHolder_loginControl_Password']");
+            put("ar", "//input[@id='ctl00_contentPlaceHolder_loginControl_Password']");
+        }});
+        //login button - cafm login page
+        put("cafm-login", new HashMap<>() {{
+            put("en", "//input[@id='ctl00_contentPlaceHolder_loginControl_LoginButton']");
+            put("ar", "//input[@id='ctl00_contentPlaceHolder_loginControl_LoginButton']");
+        }});
     }};
 
     public static String get(String locator) throws Exception {
@@ -79,5 +95,15 @@ public class LoginPageObjects {
 
     public static By getTextPassword() throws Exception {
         return By.xpath(get("text-password"));
+    }
+    //cafm uat web webelements list
+    public static By getTextcafmUsername() throws Exception {
+        return By.xpath(get("cafm-username"));
+    }
+    public static By getTextcafmPassword() throws Exception {
+        return By.xpath(get("cafm-password"));
+    }
+    public static By getButtonCafmLogin() throws Exception {
+        return By.xpath(get("cafm-login"));
     }
 }

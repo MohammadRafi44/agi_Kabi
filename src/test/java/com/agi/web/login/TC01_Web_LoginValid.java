@@ -46,4 +46,24 @@ public class TC01_Web_LoginValid extends AgiWebTest {
         TestDataManager.addDependantGlobalTestData("Global", "GlobalUsername", "GlobalUsername");
         TestDataManager.writeDependantGlobalTestData("Global");
     }
+
+    @Test(dataProvider = "testDataProvider")
+    public void cafmtestcheck(Map<String, String> data) throws Exception {
+/*
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        app.loginPage.assertLoginPageDisplayed();
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+*/
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterCafmUsername(data.get("Username"));
+        app.loginPage.enterCafmPassword(data.get("Password"));
+        app.loginPage.clickCafmLogin();
+    }
 }

@@ -7,15 +7,15 @@ import org.testng.annotations.Test;
 import java.util.Map;
 
 @Slf4j
-public class Sanity_Suite extends AgiMobileTest {
+public class sanitySuite extends AgiMobileTest {
 
-    // TC_MOB_1
+    // TC_MOB_1     //ZephyrID//AEA-T130
     @Test(dataProvider = "testDataProvider",
             description = "Scenario: Login with valid Driver ID on Mobile\n" +
                     "- Given a mobile user exists with a valid Driver ID\n" +
                     "- When the user logs in with correct credentials\n" +
                     "- Then the login should be successful\n" +
-                    "- And the user dashboard should be displayed")
+                    "- And the user dashboard should be displayed", priority = 1)
     public void loginValidDriverID(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data :" + data.toString());
         logger.info("Step 01 : Select UAT environment and click UAT button ");

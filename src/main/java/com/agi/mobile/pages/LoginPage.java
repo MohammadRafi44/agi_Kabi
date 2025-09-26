@@ -43,7 +43,7 @@ public class LoginPage extends MobileBasePage {
         logger.info("Click Generate OTP ");
         Mobile.waitUntilVisibilityOfElement(LoginPageObjects.getButtonGenerateOtp(), elementTimeout);
         Mobile.click(LoginPageObjects.getButtonGenerateOtp());
-        logger.addScreenshot("After clicking on Generate OTP Button");
+//        logger.addScreenshot("After clicking on Generate OTP Button");
     }
 //    public void enterOtp(String otp) throws Exception {
 //        logger.info("Enter OTP as " + otp);
@@ -67,7 +67,6 @@ public class LoginPage extends MobileBasePage {
         logger.info("Click UAT Button");
         Mobile.waitUntilElementToBeClickable(LoginPageObjects.getBtnUAT(),elementTimeout);
         Mobile.click(LoginPageObjects.getBtnUAT());
-        logger.addScreenshot("Clicked on UAT");
     }
     public void clickContinue() throws Exception {
         logger.info("Click Continue");
@@ -93,7 +92,6 @@ public class LoginPage extends MobileBasePage {
     public void selectEnvironment() throws Exception {
         logger.info("Select Application Environment...");
         clickUAT();
-        logger.addScreenshot("After Login");
     }
     public void login() throws Exception {
         logger.info("Login to application...");
@@ -113,7 +111,7 @@ public class LoginPage extends MobileBasePage {
         logger.info("Verifying the Invalid Driver Login message");
         Mobile.waitUntilVisibilityOfElement(LoginPageObjects.getTextInvalidDriverErrorMessage(),elementTimeout);
         assertInvalidDriverErrorMessageDisplayed();
-        logger.addScreenshot("Invalid Driver Login Message is ...");
+//        logger.addScreenshot("Invalid Driver Login Message is ...");
     }
     public void enterOtp(String otp) throws Exception {
 
@@ -245,30 +243,26 @@ public class LoginPage extends MobileBasePage {
 
     public void assertInvalidDriverErrorMessageDisplayed() throws Exception {
         By invalidDriverErrorLocator = LoginPageObjects.getTextInvalidDriverErrorMessage();
-
-        try {
-            Mobile.waitUntilVisibilityOfElement(invalidDriverErrorLocator, elementTimeout);
-
-            if (Mobile.isElementPresent(invalidDriverErrorLocator)) {
-                logger.addScreenshot("✅ Invalid driver error message is visible.");
-                logger.addPassLabel("✅ 'User does not exist' error message displayed.");
+        String expectedText = "No Driver found with this Driver ID";
+        Mobile.waitUntilVisibilityOfElement(invalidDriverErrorLocator, elementTimeout);
+        if (Mobile.isElementPresent(invalidDriverErrorLocator)) {
+            // Now actually fetch the text
+            String actualText = Mobile.getText(invalidDriverErrorLocator);
+            if (expectedText.equals(actualText.trim())) {
+                logger.addScreenshot("✅ Error message text matches: " + actualText);
             } else {
-                logger.addScreenshot("❌ Invalid driver error message not visible.");
-                logger.fail("❌ Expected 'User does not exist' error message not found on the screen.");
-                throw new AssertionError("Expected 'User does not exist' error message not found on the screen.");
+                logger.fail("❌ Expected '" + expectedText + "' but found '" + actualText + "'");
+                logger.addScreenshot("❌ Error message text mismatch. Found: " + actualText);
+                throw new AssertionError("Expected '" + expectedText + "' but found '" + actualText + "'");
             }
-
-        } catch (Exception e) {
-            logger.fail("❌ Exception occurred while verifying invalid driver error message: " + e.getMessage());
-            logger.addScreenshot("❌ Exception during invalid driver error message validation");
-            throw e;
+        } else {
+            logger.fail("❌ Error message element not present on screen.");
+            logger.addScreenshot("❌ Error message element not visible.");
+            throw new AssertionError("Error message element not present on screen.");
         }
     }
 
-
-
     public void assertUATButtonNotDisplayed() throws Exception {
-
         Assert.assertTrue(Mobile.isElementDisplayed(LoginPageObjects.getBtnUAT()), "UAT button not present.");
         logger.addPassLabel("UAT button is displayed.");
     }
