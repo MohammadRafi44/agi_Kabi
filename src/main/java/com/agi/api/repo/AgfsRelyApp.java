@@ -1,22 +1,21 @@
 package com.agi.api.repo;
 
 import com.alghurair.api.RestAssuredAPI;
+import com.alghurair.manager.ReportManager;
 import com.alghurair.manager.TestConfigManager;
 import com.alghurair.manager.TestDataManager;
 import io.restassured.http.ContentType;
-import com.alghurair.manager.ReportManager;
 
 import java.util.*;
-import java.util.regex.Pattern;
 
-public class CafmAPI extends RestAssuredAPI {
+public class AgfsRelyApp extends RestAssuredAPI {
 
     // --- add this ---
-    private static final ReportManager logger = new ReportManager(CafmAPI.class);
+    private static final ReportManager logger = new ReportManager(AgfsRelyApp.class);
 
     // ----- constructor (keeps defaults in code, actual base URL can still come from Excel) -----
-    public CafmAPI() {
-        super(RestAssuredAPI.ApiConfig.builder()
+    public AgfsRelyApp() {
+        super(ApiConfig.builder()
                 .baseUri(TestConfigManager.getTestSettingsAPIBaseURL()) // will be ignored if APIDetails has absolute URL
                 .defaultContentType(ContentType.JSON)
                 .relaxedHttpsValidation(true)
@@ -27,7 +26,7 @@ public class CafmAPI extends RestAssuredAPI {
     }
 
     // ====== 1) GETTER: pull everything from RunManager
-    public Map<String, String> getCafmWorkOrderAPIDetails(String reference) throws Exception {
+    public Map<String, String> getAddEmergencyContactAPIDetails(String reference) throws Exception {
         Map<String, String> m = getAPIDetails(reference);
 
         // --- Unirest-style request logging for Step 01 ---
@@ -85,14 +84,20 @@ public class CafmAPI extends RestAssuredAPI {
     }
 
     // ====== 2) ACTION: perform the API using the map (placeholders replaced from 'data')
-    public ApiResponse cafmCreateWorkOrder(Map<String,String> data) {
+    public ApiResponse addEmergencyContact(Map<String,String> data) {
 
 
-        //String url = data.getOrDefault("RequestURL","") + data.getOrDefault("EndPoint","");
+// Replace {employeeNumber} etc from RunManager data
+        String endpoint = applyPlaceholders(data.getOrDefault("EndPoint",""), data);
+        data.put("EndPoint", endpoint); // optional: so logs show the final endpoint
+
+        String url = resolveUrl(data.get("RequestURL"), endpoint);
+
+/*        //String url = data.getOrDefault("RequestURL","") + data.getOrDefault("EndPoint","");
         String url = resolveUrl(
                 data.get("RequestURL"),
                 data.get("EndPoint")
-        );
+        );*/
 
         String method = data.getOrDefault("HTTPMethod","POST").toUpperCase(Locale.ROOT);
 
@@ -129,11 +134,36 @@ public class CafmAPI extends RestAssuredAPI {
         data.put("ActualResponsePayload", res.asString()); // keep behavior
 
         // Extract field you used: Data.WorkOrders[0].ResponseMessage
-        String responseMessage = res.jsonString("Data.WorkOrders[0].ResponseMessage");
+        String responseMessage = res.jsonString("Message");
         if (responseMessage != null) data.put("response_Message", responseMessage);
 
         return res;
     }
+
+
+    public void assertAddEmergencyContact(Map<String,String> data, ApiResponse res) {
+        // 1) status code
+        String exp = data.getOrDefault("ExpectedResponseStatusCode", "").trim();
+        if (!exp.isBlank()) res.assertStatus(Integer.parseInt(exp), logger);
+        // 2) node present
+        String nodeList = data.getOrDefault("ExpectedNodePresent", "").trim();
+        if (!nodeList.isBlank()) {
+            for (String path : splitPaths(nodeList)) {
+                res.assertNodePresent(path, logger);
+            }
+        }
+        // 3) node value equals
+        String fieldsJson = data.getOrDefault("ExpectedFieldsJSON", "").trim();
+        if (!fieldsJson.isBlank()) {
+            fieldsJson = applyPlaceholders(fieldsJson, data); // keep placeholder support
+            Map<String,Object> expected = parseJsonMap(fieldsJson);
+            expected.forEach((path, val) -> res.assertNodeEquals(path, val,logger));
+        }
+        // 4) extraction for chaining (RunManager column: ExtractJSON)
+        RestAssuredAPI.extractJson(res, data, data.get("ExtractJSON"), logger);
+    }
+
+    // ===== utils =====
     private static String resolveUrl(String base, String endpoint) {
         String e = Optional.ofNullable(endpoint).orElse("").trim();
         String b = Optional.ofNullable(base).orElse("").trim();
@@ -150,97 +180,11 @@ public class CafmAPI extends RestAssuredAPI {
         // Fallback: let RestAssured’s baseUri (from TestConfig) handle it.
         return e;
     }
-
-/*    public void assertCafmCreateWorkOrderResponse(Map<String,String> data, ApiResponse res) {
-        String exp = data.getOrDefault("ExpectedResponseStatusCode", "").trim();
-        // 1) status code
-        if (!exp.isBlank()) res.assertStatus(Integer.parseInt(exp), logger);
-        // 2) node present
-        res.assertNodePresent("Data.WorkOrders[0].ResponseMessage", logger);
-        // 3) node value equals
-        res.assertNodeEquals("Message", "Work Order operation completed", logger);
-        // 4) optional field-by-field check driven by sheet (kept if you want)
-        String expPayload = data.getOrDefault("ExpectedResponsePayload", "").trim();
-        if (!expPayload.isBlank()) {
-            expPayload = applyPlaceholders(expPayload, data);
-            Map<String,Object> expected = parseJsonMap(expPayload);
-            expected.forEach((k, v) -> res.assertNodeEquals(k, v, logger));
-        }
-        // 5) extraction for chaining (RunManager column: ExtractJSON)
-        RestAssuredAPI.extractJson(res, data, data.get("ExtractJSON"), logger);
-    }*/
-
-    public void assertCafmCreateWorkOrderResponse(Map<String,String> data, ApiResponse res) {
-        // 1) status code
-        String exp = data.getOrDefault("ExpectedResponseStatusCode", "").trim();
-        if (!exp.isBlank()) res.assertStatus(Integer.parseInt(exp), logger);
-        // 2) node present
-//        res.assertNodePresent(data.get("ExpectedNodePresent"), logger);
-
-        String nodeList = data.getOrDefault("ExpectedNodePresent", "").trim();
-        if (!nodeList.isBlank()) {
-            for (String path : splitPaths(nodeList)) {
-                res.assertNodePresent(path, logger);
-            }
-        }
-        // 3) node value equals
-//        res.assertNodeEquals("Message", "Work Order operation completed", logger);
-        String fieldsJson = data.getOrDefault("ExpectedFieldsJSON", "").trim();
-        if (!fieldsJson.isBlank()) {
-            fieldsJson = applyPlaceholders(fieldsJson, data); // keep placeholder support
-            Map<String,Object> expected = parseJsonMap(fieldsJson);
-            expected.forEach((path, val) -> res.assertNodeEquals(path, val,logger));
-        }
-
-        // 5) extraction for chaining (RunManager column: ExtractJSON)
-        RestAssuredAPI.extractJson(res, data, data.get("ExtractJSON"), logger);
-    }
-
-    /*public void assertCafmCreateWorkOrderResponse(Map<String,String> data, ApiResponse res) {
-        // 1) status code
-        String exp = data.getOrDefault("ExpectedResponseStatusCode", "").trim();
-        if (!exp.isBlank()) res.assertStatus(Integer.parseInt(exp));
-
-        // 2) node present
-        res.assertNodePresent("Data.WorkOrders[0].ResponseMessage");
-
-        // 3) node value equals
-        res.assertNodeEquals("Message", "Work Order operation completed");
-
-        // 4) optional field-by-field check driven by sheet (kept if you want)
-        String expPayload = data.getOrDefault("ExpectedResponsePayload", "").trim();
-        if (!expPayload.isBlank()) {
-            expPayload = applyPlaceholders(expPayload, data);
-            Map<String,Object> expected = parseJsonMap(expPayload);
-            for (var e : expected.entrySet()) {
-                res.assertNodeEquals(e.getKey(), e.getValue());
-            }
-        }
-
-        // 5) extraction for chaining (RunManager column: ExtractJSON)
-        RestAssuredAPI.extractJson(res, data, data.get("ExtractJSON"));
-
-    }*/
-
-    // ===== utils =====
     @SuppressWarnings("unchecked")
     private static Map<String,Object> parseJsonMap(String json) {
         if (json == null || json.isBlank()) return new LinkedHashMap<>();
         try { return new com.fasterxml.jackson.databind.ObjectMapper().readValue(json, Map.class); }
         catch (Exception e) { throw new IllegalArgumentException("Bad JSON: " + json, e); }
-    }
-
-    /** Replace {Key} or {{Key}} by matching any key in 'data' map (covers all your earlier manual replacements) */
-    private static String applyPlaceholders(String text, Map<String,?> data) {
-        if (text == null || text.isBlank()) return text;
-        String out = text;
-        for (var e : data.entrySet()) {
-            String k = e.getKey();
-            String v = Objects.toString(e.getValue(), "");
-            out = out.replace("{"+k+"}", v).replace("{{"+k+"}}", v);
-        }
-        // normalize true/false/number strings if you need; JSON remains valid as strings are quoted in your sheet
-        return out;
     }
 
     private static List<String> splitPaths(String s) {
@@ -256,6 +200,19 @@ public class CafmAPI extends RestAssuredAPI {
         }
         return Arrays.stream(s.split("[,|]"))
                 .map(String::trim).filter(x -> !x.isEmpty()).toList();
+    }
+
+    /** Replace {Key} or {{Key}} by matching any key in 'data' map (covers all your earlier manual replacements) */
+    private static String applyPlaceholders(String text, Map<String,?> data) {
+        if (text == null || text.isBlank()) return text;
+        String out = text;
+        for (var e : data.entrySet()) {
+            String k = e.getKey();
+            String v = Objects.toString(e.getValue(), "");
+            out = out.replace("{"+k+"}", v).replace("{{"+k+"}}", v);
+        }
+        // normalize true/false/number strings if you need; JSON remains valid as strings are quoted in your sheet
+        return out;
     }
 
 }

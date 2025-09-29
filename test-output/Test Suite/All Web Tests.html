@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Sep 26 15:16:53 GST 2025</td>
+<td>Started on:</td><td>Mon Sep 29 17:35:36 GST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>251 seconds (251597 ms)</td>
+<tr><td>Total time:</td><td>6 seconds (6027 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,63 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.agi.mobile.suites.sanitypack.sanitySuite.loginValidDriverID()'><b>loginValidDriverID</b><br>Test class: com.agi.mobile.suites.sanitypack.sanitySuite<br>Test method: Scenario: Login with valid Driver ID on Mobile
-- Given a mobile user exists with a valid Driver ID
-- When the user logs in with correct credentials
-- Then the login should be successful
-- And the user dashboard should be displayed<br>Parameters: {AssignedTechnician=, OTP=123456, ItemBarCode=, URL=, ShortDescription=, IsRecurring=, Driverid=3114791, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=, PropertyName=, Reference=ValidUser, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=, Username=, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.TextView[@text=&quot;󰍜&quot;] (tried for 100 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appium:appActivity: com.buddysapp.MainActivity, appium:appPackage: com.buddysapp.dev.revamp, appium:autoAcceptAlerts: true, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: uiautomator2, appium:build: agi-build-1, appium:bundleID: com.buddysapp.dev.revamp, appium:bundleId: com.buddysapp.dev.revamp, appium:chromedriverArgs: [--adb-port=5038], appium:chromedriverPorts: [[18144, 18154]], appium:databaseEnabled: false, appium:desired: {appActivity: com.buddysapp.MainActivity, appPackage: com.buddysapp.dev.revamp, autoAcceptAlerts: true, autoDismissAlerts: true, autoGrantPermissions: true, automationName: uiautomator2, build: agi-build-1, bundleID: com.buddysapp.dev.revamp, bundleId: com.buddysapp.dev.revamp, chromedriverArgs: [--adb-port=5038], chromedriverPorts: [[18144, 18154]], deviceName: samsung galaxy s23, disableSuppressAccessibilityService: true, goog:chromeOptions: {}, name: test, nativeWebScreenshot: true, newCommandTimeout: 100000, noReset: true, platformName: Android, project: agi-mobile, resetKeyboard: true, skipServerInstallation: true, systemPort: 8204, udid: RZCWA24PFCH, unicodeKeyboard: true}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-S911B, appium:deviceName: RZCWA24PFCH, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: RZCWA24PFCH, appium:disableSuppressAccessibilityService: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:name: test, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:noReset: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:project: agi-mobile, appium:resetKeyboard: true, appium:skipServerInstallation: true, appium:statBarHeight: 81, appium:systemPort: 8204, appium:takesScreenshot: true, appium:udid: RZCWA24PFCH, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2034, left: 0, top: 81, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, goog:chromeOptions: {}, platformName: ANDROID}
-Session ID: edfd0bee92b66beb82658ce5f43704fd7cc09222
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at com.alghurair.mobile.Mobile.waitUntilVisibilityOfElement(Mobile.java:185)
-	at com.agi.mobile.pages.LoginPage.login(LoginPage.java:99)
-	at com.agi.mobile.suites.sanitypack.sanitySuite.loginValidDriverID(sanitySuite.java:30)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1192667296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1192667296'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.TextView[@text=&quot;󰍜&quot;] (tried for 100 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appium:appActivity: com.buddysapp.MainActivity, appium:appPackage: com.buddysapp.dev.revamp, appium:autoAcceptAlerts: true, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: uiautomator2, appium:build: agi-build-1, appium:bundleID: com.buddysapp.dev.revamp, appium:bundleId: com.buddysapp.dev.revamp, appium:chromedriverArgs: [--adb-port=5038], appium:chromedriverPorts: [[18144, 18154]], appium:databaseEnabled: false, appium:desired: {appActivity: com.buddysapp.MainActivity, appPackage: com.buddysapp.dev.revamp, autoAcceptAlerts: true, autoDismissAlerts: true, autoGrantPermissions: true, automationName: uiautomator2, build: agi-build-1, bundleID: com.buddysapp.dev.revamp, bundleId: com.buddysapp.dev.revamp, chromedriverArgs: [--adb-port=5038], chromedriverPorts: [[18144, 18154]], deviceName: samsung galaxy s23, disableSuppressAccessibilityService: true, goog:chromeOptions: {}, name: test, nativeWebScreenshot: true, newCommandTimeout: 100000, noReset: true, platformName: Android, project: agi-mobile, resetKeyboard: true, skipServerInstallation: true, systemPort: 8204, udid: RZCWA24PFCH, unicodeKeyboard: true}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-S911B, appium:deviceName: RZCWA24PFCH, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: RZCWA24PFCH, appium:disableSuppressAccessibilityService: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:name: test, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:noReset: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:project: agi-mobile, appium:resetKeyboard: true, appium:skipServerInstallation: true, appium:statBarHeight: 81, appium:systemPort: 8204, appium:takesScreenshot: true, appium:udid: RZCWA24PFCH, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2034, left: 0, top: 81, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, goog:chromeOptions: {}, platformName: ANDROID}
-Session ID: edfd0bee92b66beb82658ce5f43704fd7cc09222
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at com.alghurair.mobile.Mobile.waitUntilVisibilityOfElement(Mobile.java:185)
-	at com.agi.mobile.pages.LoginPage.login(LoginPage.java:99)
-	at com.agi.mobile.suites.sanitypack.sanitySuite.loginValidDriverID(sanitySuite.java:30)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-</pre></div></td>
-<td>136</td>
-<td>com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -133,21 +76,10 @@ Session ID: edfd0bee92b66beb82658ce5f43704fd7cc09222
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.agi.mobile.suites.sanitypack.sanitySuite.loginInvalidDriverID()'><b>loginInvalidDriverID</b><br>Test class: com.agi.mobile.suites.sanitypack.sanitySuite<br>Test method: Scenario: Login with invalid Driver ID on Mobile
-- Given a mobile user enters an invalid Driver ID
-- When the user attempts to log in
-- Then an error message should be displayed indicating the user does not exist<br>Parameters: {AssignedTechnician=, OTP=123456, ItemBarCode=, URL=, ShortDescription=, IsRecurring=, Driverid=1234567, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=, PropertyName=, Reference=InvalidUser, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=111111, Username=, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}</td>
+<td title='com.agi.api.suites.regressionpack.RelyApp.addEmergencyContact()'><b>addEmergencyContact</b><br>Test class: com.agi.api.suites.regressionpack.RelyApp<br>Parameters: {PrimaryFlag=true, Reference=AddEmergencyContact, FirstName=test2, Phone_Type=Work Mobile Phone, Relationship_LegislationCode=AE, Relationship_Type=Sister, BirthCountry=Pakistan, URL=, employeeNumber=90029806, IsEmergencyContact=true, Ocp-Apim-Subscription-Key=2616e11f450a4109851c8148b5b4bd35, Names_LegislationCode=AE, PhoneNumber=8687123456, LastName=test1, CountryCode=971, BirthDate=2000-03-01T12:00:00Z}</td>
 <td></td>
-<td>13</td>
-<td>com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5</td></tr>
-<tr>
-<td title='com.agi.mobile.suites.sanitypack.sanitySuite.loginInvalidOtp()'><b>loginInvalidOtp</b><br>Test class: com.agi.mobile.suites.sanitypack.sanitySuite<br>Test method: Scenario: Login with invalid OTP on Mobile
-- Given a mobile user has requested an OTP
-- When the user enters an invalid or expired OTP
-- Then an error message should be shown indicating the OTP is invalid or expired<br>Parameters: {AssignedTechnician=, OTP=, ItemBarCode=, URL=, ShortDescription=, IsRecurring=, Driverid=3114791, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=, PropertyName=, Reference=InvalidOtp, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=111111, Username=, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}</td>
-<td></td>
-<td>36</td>
-<td>com.agi.mobile.suites.sanitypack.sanitySuite@2e6ca6b5</td></tr>
+<td>5</td>
+<td>com.agi.api.suites.regressionpack.RelyApp@776d50d6</td></tr>
 </table><p>
 </body>
 </html>

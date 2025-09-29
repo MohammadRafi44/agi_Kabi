@@ -1,34 +1,27 @@
 package com.agi.api.suites.regressionpack;
 
 import com.agi.api.base.AgiAPITest;
-import com.alghurair.api.RestAssuredAPI;
-import kong.unirest.HttpResponse;
-import kong.unirest.JsonNode;
-import kong.unirest.json.JSONObject;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.alghurair.api.RestAssuredAPI.ApiResponse;
-
 
 import java.util.Map;
 
-public class regressionSuite extends AgiAPITest {
+public class RelyApp extends AgiAPITest {
 
     @Test(dataProvider = "testDataProvider")
-    public void cafmCreateWorkOrder(Map<String,String> data) throws Exception {
+    public void addEmergencyContact(Map<String,String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data);
 
-        logger.info("Step 01: Get CAFM API details from RunManager");
-        data.putAll(api.cafmApi.getCafmWorkOrderAPIDetails("CreateWorkOrderCAFM"));
+        logger.info("Step 01: Get add Emergecny API details from RunManager");
+        data.putAll(api.relyApp.getAddEmergencyContactAPIDetails("AddEmergencyContact"));
 
-        logger.info("Step 02: Call CreateWorkOrder");
+        logger.info("Step 02: Call Add Emergency Contact API");
         //Another way of calling
         //ApiResponse response = api.cafmApi.cafmCreateWorkOrder(data);
         //with JDK21
-        var response = api.cafmApi.cafmCreateWorkOrder(data);
+        var response = api.relyApp.addEmergencyContact(data);
 
         logger.info("Step 03: Validate response (status + fields)");
-        api.cafmApi.assertCafmCreateWorkOrderResponse(data, response);
+        api.relyApp.assertAddEmergencyContact(data, response);
 
 
        /* logger.info("Step 04: Validate a specific field");
@@ -38,7 +31,7 @@ public class regressionSuite extends AgiAPITest {
     }
 
 
-
+    
 
    /* @Test(dataProvider = "testDataProvider", description =
             "Scenario: Create a new Work Order with valid details\n" +

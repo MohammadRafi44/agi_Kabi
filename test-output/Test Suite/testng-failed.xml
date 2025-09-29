@@ -7,16 +7,15 @@
   </listeners>
   <test thread-count="1" parallel="methods" name="All Web Tests(failed)">
     <classes>
-      <class name="com.agi.mobile.suites.sanitypack.sanitySuite">
+      <class name="com.agi.api.suites.regressionpack.regressionSuite">
         <methods>
-          <include name="loginValidDriverID" invocation-numbers="0"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="afterSuite"/>
           <include name="beforeSuite"/>
-          <include name="beforeSuiteRewaa"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="cafmCreateWorkOrder" invocation-numbers="0"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.agi.mobile.suites.sanitypack.sanitySuite -->
+      </class> <!-- com.agi.api.suites.regressionpack.regressionSuite -->
     </classes>
   </test> <!-- All Web Tests(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->
