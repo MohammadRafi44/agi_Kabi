@@ -1,83 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-29T17:35:36 GST" name="Test Suite" finished-at="2025-09-29T17:35:42 GST" duration-ms="6027">
+  <suite started-at="2025-10-01T17:11:23 GST" name="Test Suite" finished-at="2025-10-01T17:11:49 GST" duration-ms="25721">
     <groups>
     </groups>
-    <test started-at="2025-09-29T17:35:36 GST" name="All Web Tests" finished-at="2025-09-29T17:35:42 GST" duration-ms="6027">
+    <test started-at="2025-10-01T17:11:23 GST" name="All Web Tests" finished-at="2025-10-01T17:11:49 GST" duration-ms="25721">
       <class name="com.agi.E2E.suites.cafmE2ESuite">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@1d07d728]" started-at="2025-09-29T17:35:35 GST" name="beforeSuite" finished-at="2025-09-29T17:35:35 GST" duration-ms="88" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@26c7940a]" started-at="2025-10-01T17:11:23 GST" name="beforeSuite" finished-at="2025-10-01T17:11:23 GST" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@1d07d728]" started-at="2025-09-29T17:35:35 GST" name="beforeSuiteRewaa" finished-at="2025-09-29T17:35:35 GST" depends-on-methods="com.alghurair.base.WebBaseTest.beforeSuite" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@26c7940a]" started-at="2025-10-01T17:11:23 GST" name="beforeSuiteRewaa" finished-at="2025-10-01T17:11:23 GST" depends-on-methods="com.alghurair.base.WebBaseTest.beforeSuite" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuiteRewaa -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@1d07d728]" started-at="2025-09-29T17:35:42 GST" name="afterSuite" finished-at="2025-09-29T17:35:42 GST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@26c7940a]" started-at="2025-10-01T17:11:49 GST" name="afterSuite" finished-at="2025-10-01T17:11:49 GST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.agi.E2E.suites.cafmE2ESuite -->
-      <class name="com.agi.api.suites.regressionpack.regressionSuite">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.api.suites.regressionpack.regressionSuite@372153eb]" started-at="2025-09-29T17:35:35 GST" name="beforeSuite" finished-at="2025-09-29T17:35:36 GST" duration-ms="91" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.api.suites.regressionpack.regressionSuite@372153eb]" started-at="2025-09-29T17:35:42 GST" name="afterSuite" finished-at="2025-09-29T17:35:42 GST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.agi.api.suites.regressionpack.regressionSuite -->
-      <class name="com.agi.api.suites.regressionpack.RelyApp">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.api.suites.regressionpack.RelyApp@776d50d6]" started-at="2025-09-29T17:35:36 GST" name="beforeMethod" finished-at="2025-09-29T17:35:36 GST" duration-ms="6" status="PASS">
+      <class name="com.agi.web.login.TC02_Web_LoginInvalid">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.web.login.TC02_Web_LoginInvalid@45accb5]" started-at="2025-10-01T17:11:41 GST" name="beforeMethod" finished-at="2025-10-01T17:11:43 GST" duration-ms="2140" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=RelyApp.addEmergencyContact(java.util.Map)[pri:11, instance:com.agi.api.suites.regressionpack.RelyApp@776d50d6] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=TC02_Web_LoginInvalid.loginInvalid(java.util.Map)[pri:2, instance:com.agi.web.login.TC02_Web_LoginInvalid@45accb5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@2bae0ac8]]>
+                <![CDATA[org.testng.TestRunner@70f446c]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[Ljava.lang.Object;@570f2cf7]]>
+                <![CDATA[[Ljava.lang.Object;@4ff1e20b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="addEmergencyContact(java.util.Map)[pri:11, instance:com.agi.api.suites.regressionpack.RelyApp@776d50d6]" started-at="2025-09-29T17:35:36 GST" name="addEmergencyContact" data-provider="testDataProvider" finished-at="2025-09-29T17:35:42 GST" duration-ms="5781" status="PASS">
+        <test-method signature="loginInvalid(java.util.Map)[pri:2, instance:com.agi.web.login.TC02_Web_LoginInvalid@45accb5]" started-at="2025-10-01T17:11:43 GST" name="loginInvalid" data-provider="testDataProvider" finished-at="2025-10-01T17:11:48 GST" duration-ms="5566" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{PrimaryFlag=true, Reference=AddEmergencyContact, FirstName=test2, Phone_Type=Work Mobile Phone, Relationship_LegislationCode=AE, Relationship_Type=Sister, BirthCountry=Pakistan, URL=, employeeNumber=90029806, IsEmergencyContact=true, Ocp-Apim-Subscription-Key=2616e11f450a4109851c8148b5b4bd35, Names_LegislationCode=AE, PhoneNumber=8687123456, LastName=test1, CountryCode=971, BirthDate=2000-03-01T12:00:00Z}]]>
+                <![CDATA[{AssignedTechnician=, OTP=, ItemBarCode=, URL=https://opensource-demo.orangehrmlive.com, ShortDescription=, IsRecurring=, Driverid=, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=11111111, PropertyName=, Reference=webInvalidUser, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=, Username=Admin, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Error message displayed. expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Error message displayed. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.agi.web.pages.LoginPage.assertErrorDisplayedInvalidCredentials(LoginPage.java:114)
+at com.agi.web.login.TC02_Web_LoginInvalid.loginInvalid(TC02_Web_LoginInvalid.java:21)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInvalid -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.web.login.TC02_Web_LoginInvalid@45accb5]" started-at="2025-10-01T17:11:49 GST" name="afterMethod" finished-at="2025-10-01T17:11:49 GST" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.agi.web.login.TC02_Web_LoginInvalid -->
+      <class name="com.agi.api.suites.regressionpack.regressionSuite">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.api.suites.regressionpack.regressionSuite@17d6b6e]" started-at="2025-10-01T17:11:23 GST" name="beforeSuite" finished-at="2025-10-01T17:11:23 GST" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.api.suites.regressionpack.regressionSuite@17d6b6e]" started-at="2025-10-01T17:11:49 GST" name="afterSuite" finished-at="2025-10-01T17:11:49 GST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.agi.api.suites.regressionpack.regressionSuite -->
+      <class name="com.agi.web.login.TC01_Web_LoginValid">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@766534b0]" started-at="2025-10-01T17:11:24 GST" name="beforeMethod" finished-at="2025-10-01T17:11:27 GST" duration-ms="3564" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=TC01_Web_LoginValid.loginValid(java.util.Map)[pri:1, instance:com.agi.web.login.TC01_Web_LoginValid@766534b0] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@70f446c]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@4e2f6452]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addEmergencyContact -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.api.suites.regressionpack.RelyApp@776d50d6]" started-at="2025-09-29T17:35:42 GST" name="afterMethod" finished-at="2025-09-29T17:35:42 GST" duration-ms="1" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginValid(java.util.Map)[pri:1, instance:com.agi.web.login.TC01_Web_LoginValid@766534b0]" started-at="2025-10-01T17:11:27 GST" name="loginValid" data-provider="testDataProvider" finished-at="2025-10-01T17:11:40 GST" duration-ms="13131" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SSNNumber=78879, TestMethodName=loginValid, AssignedTechnician=, OTP=, ItemBarCode=, Gender=Male, URL=https://opensource-demo.orangehrmlive.com, ShortDescription=, IsRecurring=, Driverid=, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, Smoker=Yes, DLNumber=231568645, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=admin123, PropertyName=, Reference=UpdateValid, InstructionGroupCode=, CurrentStatus=, FirstName=FirstName, SINNumber=5565665456, InstructionNote=, MiddleName=MiddleName, OtherID=123456, RequestorEmail=, Nationality=Saudi, CreatedDateUtc=, MaritalStatus=Single, PreviousWorkOrderNumber=, InvalidOTP=, Username=Admin, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=, LastName=LastName, EmployeeID=101}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValid -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@766534b0]" started-at="2025-10-01T17:11:40 GST" name="afterMethod" finished-at="2025-10-01T17:11:41 GST" duration-ms="291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.agi.api.suites.regressionpack.RelyApp -->
+      </class> <!-- com.agi.web.login.TC01_Web_LoginValid -->
       <class name="com.agi.mobile.suites.sanitypack.sanitySuite">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@41185195]" started-at="2025-09-29T17:35:35 GST" name="beforeSuite" finished-at="2025-09-29T17:35:35 GST" duration-ms="474" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@3cd6cab5]" started-at="2025-10-01T17:11:22 GST" name="beforeSuite" finished-at="2025-10-01T17:11:23 GST" duration-ms="590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@41185195]" started-at="2025-09-29T17:35:35 GST" name="beforeSuiteRewaa" finished-at="2025-09-29T17:35:35 GST" depends-on-methods="com.alghurair.base.MobileBaseTest.beforeSuite" duration-ms="34" status="PASS">
+        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@3cd6cab5]" started-at="2025-10-01T17:11:23 GST" name="beforeSuiteRewaa" finished-at="2025-10-01T17:11:23 GST" depends-on-methods="com.alghurair.base.MobileBaseTest.beforeSuite" duration-ms="48" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuiteRewaa -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@41185195]" started-at="2025-09-29T17:35:42 GST" name="afterSuite" finished-at="2025-09-29T17:35:42 GST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@3cd6cab5]" started-at="2025-10-01T17:11:49 GST" name="afterSuite" finished-at="2025-10-01T17:11:49 GST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

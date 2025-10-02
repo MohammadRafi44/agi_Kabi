@@ -7,15 +7,16 @@
   </listeners>
   <test thread-count="1" parallel="methods" name="All Web Tests(failed)">
     <classes>
-      <class name="com.agi.api.suites.regressionpack.regressionSuite">
+      <class name="com.agi.web.login.TC02_Web_LoginInvalid">
         <methods>
-          <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="afterMethod"/>
-          <include name="cafmCreateWorkOrder" invocation-numbers="0"/>
           <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="loginInvalid" invocation-numbers="0"/>
+          <include name="beforeSuiteRewaa"/>
         </methods>
-      </class> <!-- com.agi.api.suites.regressionpack.regressionSuite -->
+      </class> <!-- com.agi.web.login.TC02_Web_LoginInvalid -->
     </classes>
   </test> <!-- All Web Tests(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->

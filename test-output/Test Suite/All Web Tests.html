@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 29 17:35:36 GST 2025</td>
+<td>Started on:</td><td>Wed Oct 01 17:11:23 GST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>6 seconds (6027 ms)</td>
+<tr><td>Total time:</td><td>25 seconds (25721 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,46 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.agi.web.login.TC02_Web_LoginInvalid.loginInvalid()'><b>loginInvalid</b><br>Test class: com.agi.web.login.TC02_Web_LoginInvalid<br>Parameters: {AssignedTechnician=, OTP=, ItemBarCode=, URL=https://opensource-demo.orangehrmlive.com, ShortDescription=, IsRecurring=, Driverid=, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=11111111, PropertyName=, Reference=webInvalidUser, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=, Username=Admin, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}</td>
+<td><div><pre>java.lang.AssertionError: Error message displayed. expected [true] but found [false]
+	at com.agi.web.pages.LoginPage.assertErrorDisplayedInvalidCredentials(LoginPage.java:114)
+	at com.agi.web.login.TC02_Web_LoginInvalid.loginInvalid(TC02_Web_LoginInvalid.java:21)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1573774577", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1573774577'><pre>java.lang.AssertionError: Error message displayed. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.agi.web.pages.LoginPage.assertErrorDisplayedInvalidCredentials(LoginPage.java:114)
+	at com.agi.web.login.TC02_Web_LoginInvalid.loginInvalid(TC02_Web_LoginInvalid.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>5</td>
+<td>com.agi.web.login.TC02_Web_LoginInvalid@45accb5</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +116,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.agi.api.suites.regressionpack.RelyApp.addEmergencyContact()'><b>addEmergencyContact</b><br>Test class: com.agi.api.suites.regressionpack.RelyApp<br>Parameters: {PrimaryFlag=true, Reference=AddEmergencyContact, FirstName=test2, Phone_Type=Work Mobile Phone, Relationship_LegislationCode=AE, Relationship_Type=Sister, BirthCountry=Pakistan, URL=, employeeNumber=90029806, IsEmergencyContact=true, Ocp-Apim-Subscription-Key=2616e11f450a4109851c8148b5b4bd35, Names_LegislationCode=AE, PhoneNumber=8687123456, LastName=test1, CountryCode=971, BirthDate=2000-03-01T12:00:00Z}</td>
+<td title='com.agi.web.login.TC01_Web_LoginValid.loginValid()'><b>loginValid</b><br>Test class: com.agi.web.login.TC01_Web_LoginValid<br>Parameters: {SSNNumber=78879, TestMethodName=loginValid, AssignedTechnician=, OTP=, ItemBarCode=, Gender=Male, URL=https://opensource-demo.orangehrmlive.com, ShortDescription=, IsRecurring=, Driverid=, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, Smoker=Yes, DLNumber=231568645, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=admin123, PropertyName=, Reference=UpdateValid, InstructionGroupCode=, CurrentStatus=, FirstName=FirstName, SINNumber=5565665456, InstructionNote=, MiddleName=MiddleName, OtherID=123456, RequestorEmail=, Nationality=Saudi, CreatedDateUtc=, MaritalStatus=Single, PreviousWorkOrderNumber=, InvalidOTP=, Username=Admin, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=, LastName=LastName, EmployeeID=101}</td>
 <td></td>
-<td>5</td>
-<td>com.agi.api.suites.regressionpack.RelyApp@776d50d6</td></tr>
+<td>13</td>
+<td>com.agi.web.login.TC01_Web_LoginValid@766534b0</td></tr>
 </table><p>
 </body>
 </html>

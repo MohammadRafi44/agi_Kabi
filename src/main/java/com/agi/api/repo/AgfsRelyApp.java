@@ -9,10 +9,8 @@ import io.restassured.http.ContentType;
 import java.util.*;
 
 public class AgfsRelyApp extends RestAssuredAPI {
-
     // --- add this ---
     private static final ReportManager logger = new ReportManager(AgfsRelyApp.class);
-
     // ----- constructor (keeps defaults in code, actual base URL can still come from Excel) -----
     public AgfsRelyApp() {
         super(ApiConfig.builder()
@@ -24,7 +22,6 @@ public class AgfsRelyApp extends RestAssuredAPI {
                 .retryDelayMs(300)
                 .build());
     }
-
     // ====== 1) GETTER: pull everything from RunManager
     public Map<String, String> getAddEmergencyContactAPIDetails(String reference) throws Exception {
         Map<String, String> m = getAPIDetails(reference);
@@ -48,12 +45,10 @@ public class AgfsRelyApp extends RestAssuredAPI {
 
         return m;
     }
-
     // ====== 1) GETTER: pull everything from RunManager (APIDetails + HeaderDetails + RequestPayloadDetails + ResponseDetails)
 /*    public Map<String, String> getCafmWorkOrderAPIDetails(String reference) throws Exception {
         return getAPIDetails(reference);
     }*/
-
     /** Mirrors your old UnirestAPI#getAPIDetails(reference) */
     public Map<String, String> getAPIDetails(String reference) throws Exception {
         Map<String,String> api = TestDataManager.getTestDataAsMap("APIDetails", reference); // HTTPMethod, HeaderReference, RequestURL, EndPoint, RequestPayloadReference, ResponseReference
@@ -82,7 +77,6 @@ public class AgfsRelyApp extends RestAssuredAPI {
         out.put("RequestPayload", payload);
         return out;
     }
-
     // ====== 2) ACTION: perform the API using the map (placeholders replaced from 'data')
     public ApiResponse addEmergencyContact(Map<String,String> data) {
 
@@ -139,8 +133,6 @@ public class AgfsRelyApp extends RestAssuredAPI {
 
         return res;
     }
-
-
     public void assertAddEmergencyContact(Map<String,String> data, ApiResponse res) {
         // 1) status code
         String exp = data.getOrDefault("ExpectedResponseStatusCode", "").trim();
@@ -162,6 +154,8 @@ public class AgfsRelyApp extends RestAssuredAPI {
         // 4) extraction for chaining (RunManager column: ExtractJSON)
         RestAssuredAPI.extractJson(res, data, data.get("ExtractJSON"), logger);
     }
+
+
 
     // ===== utils =====
     private static String resolveUrl(String base, String endpoint) {
@@ -186,7 +180,6 @@ public class AgfsRelyApp extends RestAssuredAPI {
         try { return new com.fasterxml.jackson.databind.ObjectMapper().readValue(json, Map.class); }
         catch (Exception e) { throw new IllegalArgumentException("Bad JSON: " + json, e); }
     }
-
     private static List<String> splitPaths(String s) {
         s = s.trim();
         // allow JSON array OR comma/pipe separated list OR single value
@@ -201,7 +194,6 @@ public class AgfsRelyApp extends RestAssuredAPI {
         return Arrays.stream(s.split("[,|]"))
                 .map(String::trim).filter(x -> !x.isEmpty()).toList();
     }
-
     /** Replace {Key} or {{Key}} by matching any key in 'data' map (covers all your earlier manual replacements) */
     private static String applyPlaceholders(String text, Map<String,?> data) {
         if (text == null || text.isBlank()) return text;
@@ -214,5 +206,4 @@ public class AgfsRelyApp extends RestAssuredAPI {
         // normalize true/false/number strings if you need; JSON remains valid as strings are quoted in your sheet
         return out;
     }
-
 }
