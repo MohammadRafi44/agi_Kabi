@@ -1,3 +1,5 @@
 {
-  "sanitySuite#loginInvalidOtp": "AEA-T138"
+  "sanitySuite#loginValidDriverID": "AEA-T139",
+  "sanitySuite#loginInvalidDriverID": "AEA-T140",
+  "sanitySuite#loginInvalidOtp": "AEA-T141"
 }

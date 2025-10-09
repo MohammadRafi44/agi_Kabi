@@ -11,7 +11,7 @@ public class AgiAPI {
     public final RetrieveEmployeeDetails_API retrieveEmployeeDetailsApi;
     public final RetrieveEmergencyContactsDetail_API retrieveEmergencyContactsDetailApi;
     public final RetrieveEmployeeRecord_API retrieveEmployeeRecord_api;
-
+    public final ViewEmployeeProfilePicture_API viewEmployeeProfilePicture_api;
 
 
     public AgiAPI() {
@@ -21,6 +21,7 @@ public class AgiAPI {
         retrieveEmployeeDetailsApi = new RetrieveEmployeeDetails_API();
         retrieveEmergencyContactsDetailApi = new RetrieveEmergencyContactsDetail_API();
         retrieveEmployeeRecord_api = new RetrieveEmployeeRecord_API();
+        viewEmployeeProfilePicture_api = new ViewEmployeeProfilePicture_API();
 
 
 

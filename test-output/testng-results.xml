@@ -1,66 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-01T17:11:23 GST" name="Test Suite" finished-at="2025-10-01T17:11:49 GST" duration-ms="25721">
+  <suite started-at="2025-10-09T11:17:34 GST" name="Test Suite" finished-at="2025-10-09T11:22:47 GST" duration-ms="313210">
     <groups>
     </groups>
-    <test started-at="2025-10-01T17:11:23 GST" name="All Web Tests" finished-at="2025-10-01T17:11:49 GST" duration-ms="25721">
+    <test started-at="2025-10-09T11:17:34 GST" name="All Web Tests" finished-at="2025-10-09T11:22:47 GST" duration-ms="313210">
       <class name="com.agi.E2E.suites.cafmE2ESuite">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@26c7940a]" started-at="2025-10-01T17:11:23 GST" name="beforeSuite" finished-at="2025-10-01T17:11:23 GST" duration-ms="106" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@7b2a6ed3]" started-at="2025-10-09T11:17:33 GST" name="beforeSuite" finished-at="2025-10-09T11:17:33 GST" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@26c7940a]" started-at="2025-10-01T17:11:23 GST" name="beforeSuiteRewaa" finished-at="2025-10-01T17:11:23 GST" depends-on-methods="com.alghurair.base.WebBaseTest.beforeSuite" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@7b2a6ed3]" started-at="2025-10-09T11:17:33 GST" name="beforeSuiteRewaa" finished-at="2025-10-09T11:17:33 GST" depends-on-methods="com.alghurair.base.WebBaseTest.beforeSuite" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuiteRewaa -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@26c7940a]" started-at="2025-10-01T17:11:49 GST" name="afterSuite" finished-at="2025-10-01T17:11:49 GST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.E2E.suites.cafmE2ESuite@7b2a6ed3]" started-at="2025-10-09T11:22:47 GST" name="afterSuite" finished-at="2025-10-09T11:22:47 GST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.agi.E2E.suites.cafmE2ESuite -->
-      <class name="com.agi.web.login.TC02_Web_LoginInvalid">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.web.login.TC02_Web_LoginInvalid@45accb5]" started-at="2025-10-01T17:11:41 GST" name="beforeMethod" finished-at="2025-10-01T17:11:43 GST" duration-ms="2140" status="PASS">
+      <class name="com.agi.api.suites.regressionpack.regressionSuite">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.api.suites.regressionpack.regressionSuite@5843ab8]" started-at="2025-10-09T11:17:33 GST" name="beforeSuite" finished-at="2025-10-09T11:17:34 GST" duration-ms="141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.api.suites.regressionpack.regressionSuite@5843ab8]" started-at="2025-10-09T11:22:47 GST" name="afterSuite" finished-at="2025-10-09T11:22:47 GST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.agi.api.suites.regressionpack.regressionSuite -->
+      <class name="com.agi.mobile.suites.sanitypack.sanitySuite">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:17:32 GST" name="beforeSuite" finished-at="2025-10-09T11:17:33 GST" duration-ms="1195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:17:33 GST" name="beforeSuiteRewaa" finished-at="2025-10-09T11:17:33 GST" depends-on-methods="com.alghurair.base.MobileBaseTest.beforeSuite" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuiteRewaa -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:17:34 GST" name="beforeMethod" finished-at="2025-10-09T11:17:39 GST" duration-ms="5261" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=TC02_Web_LoginInvalid.loginInvalid(java.util.Map)[pri:2, instance:com.agi.web.login.TC02_Web_LoginInvalid@45accb5] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=sanitySuite.loginValidDriverID(java.util.Map)[pri:5, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@70f446c]]>
+                <![CDATA[org.testng.TestRunner@24cf1abf]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[Ljava.lang.Object;@4ff1e20b]]>
+                <![CDATA[[Ljava.lang.Object;@5b84007e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginInvalid(java.util.Map)[pri:2, instance:com.agi.web.login.TC02_Web_LoginInvalid@45accb5]" started-at="2025-10-01T17:11:43 GST" name="loginInvalid" data-provider="testDataProvider" finished-at="2025-10-01T17:11:48 GST" duration-ms="5566" status="FAIL">
+        <test-method signature="loginValidDriverID(java.util.Map)[pri:5, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:17:39 GST" name="loginValidDriverID" description="Scenario: Login with valid Driver ID on Mobile
+- Given a mobile user exists with a valid Driver ID
+- When the user logs in with correct credentials
+- Then the login should be successful
+- And the user dashboard should be displayed" data-provider="testDataProvider" finished-at="2025-10-09T11:19:18 GST" duration-ms="98816" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{AssignedTechnician=, OTP=, ItemBarCode=, URL=https://opensource-demo.orangehrmlive.com, ShortDescription=, IsRecurring=, Driverid=, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=11111111, PropertyName=, Reference=webInvalidUser, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=, Username=Admin, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}]]>
+                <![CDATA[{AssignedTechnician=, OTP=123456, ItemBarCode=, URL=, ShortDescription=, IsRecurring=, Driverid=3114791, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=, PropertyName=, Reference=ValidUser, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=, Username=, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Error message displayed. expected [true] but found [false]]]>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [a8dcbbfb-fe8e-438f-a3aa-588a86692d92, findElement {using=xpath, value=//android.widget.TextView[@text='UAT']}]
+Capabilities {appium:appActivity: com.relyapp.MainActivity, appium:appPackage: com.relyapp, appium:autoAcceptAlerts: true, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.relyapp.MainActivity, appPackage: com.relyapp, autoAcceptAlerts: true, autoDismissAlerts: true, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RFCT20FMQYN, fullReset: false, newCommandTimeout: 100000, noReset: true, platformName: ANDROID, skipServerInstallation: false, unicodeKeyboard: true}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-N981B, appium:deviceName: RFCT20FMQYN, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: RFCT20FMQYN, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:noReset: true, appium:pixelRatio: 2.8125, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:statBarHeight: 92, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2308, left: 0, top: 92, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: a8dcbbfb-fe8e-438f-a3aa-588a86692d92]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Error message displayed. expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.agi.web.pages.LoginPage.assertErrorDisplayedInvalidCredentials(LoginPage.java:114)
-at com.agi.web.login.TC02_Web_LoginInvalid.loginInvalid(TC02_Web_LoginInvalid.java:21)
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [a8dcbbfb-fe8e-438f-a3aa-588a86692d92, findElement {using=xpath, value=//android.widget.TextView[@text='UAT']}]
+Capabilities {appium:appActivity: com.relyapp.MainActivity, appium:appPackage: com.relyapp, appium:autoAcceptAlerts: true, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.relyapp.MainActivity, appPackage: com.relyapp, autoAcceptAlerts: true, autoDismissAlerts: true, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RFCT20FMQYN, fullReset: false, newCommandTimeout: 100000, noReset: true, platformName: ANDROID, skipServerInstallation: false, unicodeKeyboard: true}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-N981B, appium:deviceName: RFCT20FMQYN, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: RFCT20FMQYN, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:noReset: true, appium:pixelRatio: 2.8125, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:statBarHeight: 92, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2308, left: 0, top: 92, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: a8dcbbfb-fe8e-438f-a3aa-588a86692d92
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+at com.alghurair.mobile.Mobile.waitUntilElementToBeClickable(Mobile.java:200)
+at com.agi.mobile.pages.LoginPage.clickUAT(LoginPage.java:74)
+at com.agi.mobile.pages.LoginPage.selectEnvironment(LoginPage.java:100)
+at com.agi.mobile.suites.sanitypack.sanitySuite.loginValidDriverID(sanitySuite.java:22)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -76,73 +127,169 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginInvalid -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.web.login.TC02_Web_LoginInvalid@45accb5]" started-at="2025-10-01T17:11:49 GST" name="afterMethod" finished-at="2025-10-01T17:11:49 GST" duration-ms="179" status="PASS">
+        </test-method> <!-- loginValidDriverID -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:19:18 GST" name="afterMethod" finished-at="2025-10-09T11:19:18 GST" duration-ms="338" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.agi.web.login.TC02_Web_LoginInvalid -->
-      <class name="com.agi.api.suites.regressionpack.regressionSuite">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.api.suites.regressionpack.regressionSuite@17d6b6e]" started-at="2025-10-01T17:11:23 GST" name="beforeSuite" finished-at="2025-10-01T17:11:23 GST" duration-ms="131" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.api.suites.regressionpack.regressionSuite@17d6b6e]" started-at="2025-10-01T17:11:49 GST" name="afterSuite" finished-at="2025-10-01T17:11:49 GST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.agi.api.suites.regressionpack.regressionSuite -->
-      <class name="com.agi.web.login.TC01_Web_LoginValid">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@766534b0]" started-at="2025-10-01T17:11:24 GST" name="beforeMethod" finished-at="2025-10-01T17:11:27 GST" duration-ms="3564" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:19:18 GST" name="beforeMethod" finished-at="2025-10-09T11:19:21 GST" duration-ms="2384" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=TC01_Web_LoginValid.loginValid(java.util.Map)[pri:1, instance:com.agi.web.login.TC01_Web_LoginValid@766534b0] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=sanitySuite.loginInvalidDriverID(java.util.Map)[pri:6, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@70f446c]]>
+                <![CDATA[org.testng.TestRunner@24cf1abf]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[Ljava.lang.Object;@4e2f6452]]>
+                <![CDATA[[Ljava.lang.Object;@5961fad1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginValid(java.util.Map)[pri:1, instance:com.agi.web.login.TC01_Web_LoginValid@766534b0]" started-at="2025-10-01T17:11:27 GST" name="loginValid" data-provider="testDataProvider" finished-at="2025-10-01T17:11:40 GST" duration-ms="13131" status="PASS">
+        <test-method signature="loginInvalidDriverID(java.util.Map)[pri:6, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:19:21 GST" name="loginInvalidDriverID" description="Scenario: Login with invalid Driver ID on Mobile
+- Given a mobile user enters an invalid Driver ID
+- When the user attempts to log in
+- Then an error message should be displayed indicating the user does not exist" data-provider="testDataProvider" finished-at="2025-10-09T11:21:01 GST" duration-ms="100650" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{SSNNumber=78879, TestMethodName=loginValid, AssignedTechnician=, OTP=, ItemBarCode=, Gender=Male, URL=https://opensource-demo.orangehrmlive.com, ShortDescription=, IsRecurring=, Driverid=, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, Smoker=Yes, DLNumber=231568645, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=admin123, PropertyName=, Reference=UpdateValid, InstructionGroupCode=, CurrentStatus=, FirstName=FirstName, SINNumber=5565665456, InstructionNote=, MiddleName=MiddleName, OtherID=123456, RequestorEmail=, Nationality=Saudi, CreatedDateUtc=, MaritalStatus=Single, PreviousWorkOrderNumber=, InvalidOTP=, Username=Admin, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=, LastName=LastName, EmployeeID=101}]]>
+                <![CDATA[{AssignedTechnician=, OTP=123456, ItemBarCode=, URL=, ShortDescription=, IsRecurring=, Driverid=1234567, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=, PropertyName=, Reference=InvalidUser, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=111111, Username=, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.TextView[@text='UAT'] (tried for 100 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.relyapp.MainActivity, appium:appPackage: com.relyapp, appium:autoAcceptAlerts: true, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.relyapp.MainActivity, appPackage: com.relyapp, autoAcceptAlerts: true, autoDismissAlerts: true, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RFCT20FMQYN, fullReset: false, newCommandTimeout: 100000, noReset: true, platformName: ANDROID, skipServerInstallation: false, unicodeKeyboard: true}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-N981B, appium:deviceName: RFCT20FMQYN, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: RFCT20FMQYN, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:noReset: true, appium:pixelRatio: 2.8125, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:statBarHeight: 92, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2308, left: 0, top: 92, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c24e4762-f32d-42e5-b10c-03888785b2f7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.TextView[@text='UAT'] (tried for 100 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.relyapp.MainActivity, appium:appPackage: com.relyapp, appium:autoAcceptAlerts: true, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.relyapp.MainActivity, appPackage: com.relyapp, autoAcceptAlerts: true, autoDismissAlerts: true, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RFCT20FMQYN, fullReset: false, newCommandTimeout: 100000, noReset: true, platformName: ANDROID, skipServerInstallation: false, unicodeKeyboard: true}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-N981B, appium:deviceName: RFCT20FMQYN, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: RFCT20FMQYN, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:noReset: true, appium:pixelRatio: 2.8125, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:statBarHeight: 92, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2308, left: 0, top: 92, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c24e4762-f32d-42e5-b10c-03888785b2f7
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.alghurair.mobile.Mobile.waitUntilElementToBeClickable(Mobile.java:200)
+at com.agi.mobile.pages.LoginPage.clickUAT(LoginPage.java:74)
+at com.agi.mobile.pages.LoginPage.selectEnvironment(LoginPage.java:100)
+at com.agi.mobile.suites.sanitypack.sanitySuite.loginInvalidDriverID(sanitySuite.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInvalidDriverID -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:21:02 GST" name="afterMethod" finished-at="2025-10-09T11:21:02 GST" duration-ms="430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestResult,org.testng.ITestContext,[Ljava.lang.Object;)[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:21:02 GST" name="beforeMethod" finished-at="2025-10-09T11:21:05 GST" duration-ms="3191" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=sanitySuite.loginInvalidOtp(java.util.Map)[pri:7, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@24cf1abf]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@1e275478]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginValid -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.web.login.TC01_Web_LoginValid@766534b0]" started-at="2025-10-01T17:11:40 GST" name="afterMethod" finished-at="2025-10-01T17:11:41 GST" duration-ms="291" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginInvalidOtp(java.util.Map)[pri:7, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:21:05 GST" name="loginInvalidOtp" description="Scenario: Login with invalid OTP on Mobile
+- Given a mobile user has requested an OTP
+- When the user enters an invalid or expired OTP
+- Then an error message should be shown indicating the OTP is invalid or expired" data-provider="testDataProvider" finished-at="2025-10-09T11:22:46 GST" duration-ms="101031" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{AssignedTechnician=, OTP=, ItemBarCode=, URL=, ShortDescription=, IsRecurring=, Driverid=3114791, Ocp-Apim-Subscription-Key=, PriorityLevel=, ExternalReference=, CurrentSubStatus=, RequestorName=, RequestorPhone=, Discipline=, DetailedDescription=, Password=, PropertyName=, Reference=InvalidOtp, InstructionGroupCode=, CurrentStatus=, InstructionNote=, RequestorEmail=, CreatedDateUtc=, PreviousWorkOrderNumber=, InvalidOTP=111111, Username=, ResourceId=, WorkSubCategory=, WorkScheduledDate=, WorkCategory=}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.TextView[@text='UAT'] (tried for 100 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.relyapp.MainActivity, appium:appPackage: com.relyapp, appium:autoAcceptAlerts: true, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.relyapp.MainActivity, appPackage: com.relyapp, autoAcceptAlerts: true, autoDismissAlerts: true, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RFCT20FMQYN, fullReset: false, newCommandTimeout: 100000, noReset: true, platformName: ANDROID, skipServerInstallation: false, unicodeKeyboard: true}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-N981B, appium:deviceName: RFCT20FMQYN, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: RFCT20FMQYN, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:noReset: true, appium:pixelRatio: 2.8125, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:statBarHeight: 92, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2308, left: 0, top: 92, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 321d914f-7bcb-4121-9243-e661dcb73566]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.TextView[@text='UAT'] (tried for 100 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.relyapp.MainActivity, appium:appPackage: com.relyapp, appium:autoAcceptAlerts: true, appium:autoDismissAlerts: true, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.relyapp.MainActivity, appPackage: com.relyapp, autoAcceptAlerts: true, autoDismissAlerts: true, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RFCT20FMQYN, fullReset: false, newCommandTimeout: 100000, noReset: true, platformName: ANDROID, skipServerInstallation: false, unicodeKeyboard: true}, appium:deviceApiLevel: 33, appium:deviceManufacturer: samsung, appium:deviceModel: SM-N981B, appium:deviceName: RFCT20FMQYN, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: RFCT20FMQYN, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 100000, appium:noReset: true, appium:pixelRatio: 2.8125, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:statBarHeight: 92, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2308, left: 0, top: 92, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 321d914f-7bcb-4121-9243-e661dcb73566
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.alghurair.mobile.Mobile.waitUntilElementToBeClickable(Mobile.java:200)
+at com.agi.mobile.pages.LoginPage.clickUAT(LoginPage.java:74)
+at com.agi.mobile.pages.LoginPage.selectEnvironment(LoginPage.java:100)
+at com.agi.mobile.suites.sanitypack.sanitySuite.loginInvalidOtp(sanitySuite.java:68)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInvalidOtp -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:22:46 GST" name="afterMethod" finished-at="2025-10-09T11:22:47 GST" duration-ms="401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.agi.web.login.TC01_Web_LoginValid -->
-      <class name="com.agi.mobile.suites.sanitypack.sanitySuite">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@3cd6cab5]" started-at="2025-10-01T17:11:22 GST" name="beforeSuite" finished-at="2025-10-01T17:11:23 GST" duration-ms="590" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeSuiteRewaa()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@3cd6cab5]" started-at="2025-10-01T17:11:23 GST" name="beforeSuiteRewaa" finished-at="2025-10-01T17:11:23 GST" depends-on-methods="com.alghurair.base.MobileBaseTest.beforeSuite" duration-ms="48" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuiteRewaa -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@3cd6cab5]" started-at="2025-10-01T17:11:49 GST" name="afterSuite" finished-at="2025-10-01T17:11:49 GST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.agi.mobile.suites.sanitypack.sanitySuite@697f4085]" started-at="2025-10-09T11:22:47 GST" name="afterSuite" finished-at="2025-10-09T11:22:47 GST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

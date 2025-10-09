@@ -76,7 +76,38 @@ public class sanitySuite extends AgiMobileTest {
             app.loginPage.validateInvalidOtpLogin();
 
     }
+
+    // TC_MOB_1     //ZephyrID//AEA-T130
+    @Test(dataProvider = "testDataProvider",
+            description = "Scenario: Login with valid Driver ID on Mobile\n" +
+                    "- Given a mobile user exists with a valid Driver ID\n" +
+                    "- When the user logs in with correct credentials\n" +
+                    "- Then the login should be successful\n" +
+                    "- And the user dashboard should be displayed", priority = 1)
+    public void entryPointScreenValidation(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data :" + data.toString());
+
+        logger.info("Step 01 : Click on Get Started Now ");
+        app.loginPage.clickGetStartedNow();
+
+
+//        logger.info("Step 02 : Enter Driver Id ");
+//        app.loginPage.enterDriverid(data.get("Driverid"));
+//        logger.info("Step 03 : Click on Generate OTP Button ");
+//        app.loginPage.clickGenerateOtp();
+//        logger.info("Step 04 : Enter OTP ");
+//        app.loginPage.enterOtp(data.get("OTP"));
+//        logger.info("Step 05 : Click Login ");
+//        app.loginPage.login();
+//        logger.info("Step 08: Click on Menu");
+//        app.homePage.clickMenu();
+//        logger.info("Step 09: Click on My Profile");
+//        app.menuOptions.clickMyProfile();
+//        logger.info("Step 09: Click on Logout");
+//        app.myProfilePage.clickLogout();
+    }
 }
+
 
 
 

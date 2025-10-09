@@ -26,6 +26,11 @@ public class LoginPageObjects {
             put("en", "(//android.widget.TextView[@text=\"Continue\"]\n)");
             put("ar", "(//android.widget.TextView[@text=\"Continue\"]\n)");
         }});
+        put("button-GetStartedNow", new HashMap<>() {{
+            put("en", "(//android.widget.TextView[@text=\"Get started now!\"])");
+            put("ar", "(//android.widget.TextView[@text=\"Get started now!\"])");
+        }});
+
 
         // Checkbox
         // Dropdown
@@ -103,6 +108,7 @@ public class LoginPageObjects {
             put("en", "//android.widget.TextView[@text=\"No Driver found with this Driver ID\"]\n");
             put("ar", "//android.widget.TextView[@text=\"No Driver found with this Driver ID\"]\n");
         }});
+
     }};
 
     public static String get(String locator) throws Exception {
@@ -166,6 +172,11 @@ public class LoginPageObjects {
     public static By getTextInvalidDriverErrorMessage() throws Exception {
         return By.xpath(get("text-InvalidDriverErrorMessage"));
     }
+
+    public static By getButtonGetStartedNow() throws Exception {
+        return By.xpath(get("button-GetStartedNow"));
+    }
+
 
 
 }

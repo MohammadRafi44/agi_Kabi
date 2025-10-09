@@ -63,6 +63,12 @@ public class LoginPage extends MobileBasePage {
 //        assertWelcomeTextDisplayed();
     }
 
+    public void clickGetStartedNow() throws Exception {
+        logger.info("Click Get Started Now");
+        Mobile.waitUntilElementToBeClickable(LoginPageObjects.getButtonGetStartedNow(),elementTimeout);
+        Mobile.click(LoginPageObjects.getButtonGetStartedNow());
+    }
+
     public void clickUAT() throws Exception {
         logger.info("Click UAT Button");
         Mobile.waitUntilElementToBeClickable(LoginPageObjects.getBtnUAT(),elementTimeout);

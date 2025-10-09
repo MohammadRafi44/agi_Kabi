@@ -7,16 +7,18 @@
   </listeners>
   <test thread-count="1" parallel="methods" name="All Web Tests(failed)">
     <classes>
-      <class name="com.agi.web.login.TC02_Web_LoginInvalid">
+      <class name="com.agi.mobile.suites.sanitypack.sanitySuite">
         <methods>
-          <include name="afterSuite"/>
-          <include name="beforeMethod"/>
+          <include name="loginInvalidDriverID" invocation-numbers="0"/>
+          <include name="loginValidDriverID" invocation-numbers="0"/>
+          <include name="loginInvalidOtp" invocation-numbers="0"/>
           <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="afterSuite"/>
           <include name="beforeSuite"/>
-          <include name="loginInvalid" invocation-numbers="0"/>
           <include name="beforeSuiteRewaa"/>
         </methods>
-      </class> <!-- com.agi.web.login.TC02_Web_LoginInvalid -->
+      </class> <!-- com.agi.mobile.suites.sanitypack.sanitySuite -->
     </classes>
   </test> <!-- All Web Tests(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->

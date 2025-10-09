@@ -8,29 +8,6 @@ import java.util.Map;
 public class RelyApp extends AgiAPITest {
 
     @Test(dataProvider = "testDataProvider")
-    public void addEmergencyContact(Map<String,String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data);
-
-        logger.info("Step 01: Get add Emergecny API details from RunManager");
-        data.putAll(api.relyApp.getAddEmergencyContactAPIDetails("AddEmergencyContact"));
-
-        logger.info("Step 02: Call Add Emergency Contact API");
-        //Another way of calling
-        //ApiResponse response = api.cafmApi.cafmCreateWorkOrder(data);
-        //with JDK21
-        var response = api.relyApp.addEmergencyContact(data);
-
-        logger.info("Step 03: Validate response (status + fields)");
-        api.relyApp.assertAddEmergencyContact(data, response);
-
-
-       /* logger.info("Step 04: Validate a specific field");
-        String msg = response.jsonString("Data.WorkOrders[0].ResponseMessage");
-        org.testng.Assert.assertTrue(msg != null && !msg.isBlank(), "ResponseMessage present");
-        logger.pass("ResponseMessage: " + msg);*/
-    }
-
-    @Test(dataProvider = "testDataProvider")
     public void retrieveEmployeeDetails(Map<String,String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data);
 
@@ -217,6 +194,29 @@ public class RelyApp extends AgiAPITest {
 
         logger.info("Step 03: Validate response (status + fields)");
         api.retrieveEmployeeRecord_api.assertRetrieveEmployeeRecord(data, response);
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void viewEmployeeProfilePicture(Map<String,String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data);
+
+        logger.info("Step 01: Get - View Employee Profile Picture - API details from RunManager");
+        data.putAll(api.viewEmployeeProfilePicture_api.getAPIDetails("ViewEmployeeProfilePicture"));
+
+        logger.info("Step 02: Call Retrieve Employee Details API");
+        //Another way of calling
+        //ApiResponse response = api.cafmApi.cafmCreateWorkOrder(data);
+        //with JDK21
+        var response = api.viewEmployeeProfilePicture_api.viewEmployeeProfilePicture(data);
+
+        logger.info("Step 03: Validate response (status + fields)");
+        api.viewEmployeeProfilePicture_api.assertViewEmployeeProfilePicture(data, response);
+
+
+       /* logger.info("Step 04: Validate a specific field");
+        String msg = response.jsonString("Data.WorkOrders[0].ResponseMessage");
+        org.testng.Assert.assertTrue(msg != null && !msg.isBlank(), "ResponseMessage present");
+        logger.pass("ResponseMessage: " + msg);*/
     }
 
    /* @Test(dataProvider = "testDataProvider", description =
