@@ -425,3 +425,5 @@
 11:17:19.506 [ApplicationImpl pooled thread 147] INFO  com.browserstack.sdk.utils.Helpers - false
 13:56:17.927 [ApplicationImpl pooled thread 187] INFO  c.b.s.l.BrowserStackRunExtension - testng
 13:56:17.928 [ApplicationImpl pooled thread 187] INFO  com.browserstack.sdk.utils.Helpers - false
+14:23:56.880 [ApplicationImpl pooled thread 200] INFO  c.b.s.l.BrowserStackRunExtension - maven
+14:23:56.880 [ApplicationImpl pooled thread 200] INFO  com.browserstack.sdk.utils.Helpers - false
